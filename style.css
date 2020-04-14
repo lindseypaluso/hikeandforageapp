@@ -1,38 +1,4 @@
 body {
-<<<<<<< HEAD
-    
-    font-family: 'Gotu', sans-serif;
-    
-  }
-
-.nav {
-    
-    position: absolute;
-    text-align: right;
-    bottom: 10px;
-    right: 35px;
-    text-emphasis-color: black;
-    
-  }
-
-  
-
-  
-  @media only screen and (max-width: 768px){
- 
-
-   
-
-  }
-
-
-
-    @media only screen and (max-width: 640px){
-       
-
-
-    }
-=======
 
   font-family: 'Gotu', sans-serif;
 
@@ -124,6 +90,5 @@ a:link, a:visited {
     width: 27.5%;
   }
   }
->>>>>>> 870ff8976519e26674c8db96cdeaab2270167c15
       
     
