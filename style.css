@@ -18,40 +18,18 @@ body {
 
   
   @media only screen and (max-width: 768px){
-    .centerbox {
-        margin: 0px auto;
-        width: 640px;
-    }
+ 
 
-    .myname {
-      float: none;
-      display: block;
-    }
-
-    .topnav a {
-      float: right;
-      width: 27.5%;
-    }
+   
 
   }
 
 
 
     @media only screen and (max-width: 640px){
-        .centerbox {
-            margin: 0px auto;
-            width: 500px;
-        }
+       
 
-        .myname {
-          float: none;
-          display: block;
-        }
 
-        .topnav a {
-          float: right;
-          width: 27.5%;
-        }
     }
       
     
