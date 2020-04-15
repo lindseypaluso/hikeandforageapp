@@ -11,6 +11,18 @@ $(document).ready(function() {
       });
 });
 
+var controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+  triggerElement: "#trigger2",
+  triggerHook: 0.9,
+  offset: 50, // move trigger to center of element
+  reverse: false // only do once
+})
+.setClassToggle("#reveal2", "visible") // add class toggle
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
 //Hiking Project Data API
 //API key: 200727629-d773c339e8dcd5aa90cb10c2a18cde1f
 //Different methods available
