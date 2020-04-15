@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
 
   font-family: 'Gotu', sans-serif;
 
@@ -90,5 +91,63 @@ a:link, a:visited {
     width: 27.5%;
   }
   }
+=======
+    
+    font-family: 'Gotu', sans-serif;
+    
+  }
+
+.nav {
+    
+    position: absolute;
+    text-align: right;
+    
+  }
+
+  h1, .example {
+    color: #4aaaa5;
+  }
+  p {
+    color: black;
+  }
+
+  
+  @media only screen and (max-width: 768px){
+    .centerbox {
+        margin: 0px auto;
+        width: 640px;
+    }
+
+    .myname {
+      float: none;
+      display: block;
+    }
+
+    .topnav a {
+      float: right;
+      width: 27.5%;
+    }
+
+  }
+
+
+
+    @media only screen and (max-width: 640px){
+        .centerbox {
+            margin: 0px auto;
+            width: 500px;
+        }
+
+        .myname {
+          float: none;
+          display: block;
+        }
+
+        .topnav a {
+          float: right;
+          width: 27.5%;
+        }
+    }
+>>>>>>> e5d5688c281538f6805a9b0786fe0dfe2538b98a
       
     
