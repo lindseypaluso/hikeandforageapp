@@ -4,6 +4,10 @@ body {
 
 }
 
+.carousel-inner {
+  border-bottom: 2px solid white;
+}
+
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
 }
@@ -45,6 +49,52 @@ body {
 .plant-list {
   list-style-type: none;
 }
+
+.plant-space {
+  background-color: rgb(239, 243, 240);
+}
+
+.plants-header-box {
+  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
+  color: white;
+  height: 100px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 60px;
+  padding: 10px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.card {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: 1px solid gray;
+}
+
+h5 {
+  text-align: center;
+}
+
+#plant-button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(32, 53, 37);
+}
+
+#modal-button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(32, 53, 37);
+}
+
+.card-title {
+  padding: 0px;
+}
+
+
+
 
 footer {
   background-color: white;
