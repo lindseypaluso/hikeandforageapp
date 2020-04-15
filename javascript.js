@@ -12,7 +12,25 @@ $(document).ready(function() {
 });
 
 //Hiking Project Data API
+
+function locationTrails() {
+  var key = "200727629-d773c339e8dcd5aa90cb10c2a18cde1f";
+  var latitude = 39.419220;
+  var longitude = -111.950684;
+  var maxDistance = 10;
+  var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=" + maxDistance + "&key=" + key;
+
+  $.ajax({
+  url: queryURL,
+  method: "GET"
+  }).then(function (response) {
+  console.log(response);
+  //make variable to store the query data
+  result = response.data;
+  })
+
 //API key: 200727629-d773c339e8dcd5aa90cb10c2a18cde1f
+
 //Different methods available
   // getTrails - returns trails for given query
     //required arguments: key - Your private key, lat - Latitude for a given area, lon - Longitude for a given area
