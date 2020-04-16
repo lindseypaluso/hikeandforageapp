@@ -1,7 +1,10 @@
 body {
-
   font-family: 'Gotu', sans-serif;
+}
 
+.text-shadow {
+  text-shadow: 2px 2px 2px #29472A;
+  font-family: 'Gotu', sans-serif;
 }
 
 .carousel-inner {
@@ -13,7 +16,6 @@ body {
 }
 
 .nav {
-
   position: absolute;
   text-align: right;
   top: 10px;
@@ -23,10 +25,10 @@ body {
 
 .logo {
   position: absolute;
-  background:rgba(255,255,255, 0.7);
-  top: 0px;
-  width: 200px;
-  height: 200px;
+  /* background:rgba(255,255,255, 0.7); */
+  top: -5px;
+  width: 170px;
+  /* height: 200px; */
 }
 
 .logo-link {
@@ -37,12 +39,8 @@ body {
   z-index: 1;
 }
 
-.map-space {
-
-}
-
-.plant-box {
-  background-color: #f1faed;
+.side-bar {
+  background-color: white;
   color: rgb(44, 66, 44);
 }
 
@@ -108,41 +106,60 @@ a:hover {
 
 a:link, a:visited {
   color: rgb(63, 85, 63); 
+} 
+
+.bottom-bar {
+  display: none;
+  color: rgb(44, 66, 44);
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+}
+
+.plant-icons {
+  font-size: 25px;
+}
+
+.map-plants {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+
+@media only screen and (max-width: 991px){
+  .side-bar {
+  display: none;
+  }
+
+  .bottom-bar {
+    display: inherit;
+  }
 }
 
 @media only screen and (max-width: 768px){
-  .centerbox {
-    margin: 0px auto;
-    width: 640px;
+  .map-box {
+    width: 100%;
+    height: 400px;
   }
-
-  .myname {
-    float: none;
-    display: block;
-  }
-
-  .topnav a {
-    float: right;
-    width: 27.5%;
-  }
-
 }
 
 @media only screen and (max-width: 640px){
-  .centerbox {
-    margin: 0px auto;
-    width: 500px;
-  }
+  .map-box {
+    width: 100%;
+    height: 300px;
+}
 
-  .myname {
-    float: none;
-    display: block;
-  }
-
-  .topnav a {
-    float: right;
-    width: 27.5%;
-  }
   }
 
   #reveal2 {

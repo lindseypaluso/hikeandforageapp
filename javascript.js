@@ -1,15 +1,13 @@
-// mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe
-// https://api.mapbox.com/styles/v1/lisamcamp/ck8zfacri00a81iqshqireqqe.html?fresh=true&title=view&access_token=pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ
-// mapboxgl.accessToken = pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ;
-
-
-// Carousel image rotation function
-
 $(document).ready(function() {
-    $('.carousel').carousel('cycle') ({
-        interval: 2000
-      });
-});
+
+// Map
+mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe'
+    });
+    map.scrollZoom.disable();
+
 
 var controller = new ScrollMagic.Controller();
 
@@ -32,6 +30,7 @@ function locationTrails() {
   var maxDistance = 10;
   var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=" + maxDistance + "&key=" + key;
 
+  
   $.ajax({
   url: queryURL,
   method: "GET"
@@ -57,3 +56,6 @@ function locationTrails() {
     //required: ids
     //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
   
+}
+
+});
