@@ -11,6 +11,18 @@ $(document).ready(function() {
       });
 });
 
+var controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+  triggerElement: "#trigger2",
+  triggerHook: 0.9,
+  offset: 50, // move trigger to center of element
+  reverse: false // only do once
+})
+.setClassToggle("#reveal2", "visible") // add class toggle
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
+
 //Hiking Project Data API
 
 function locationTrails() {
