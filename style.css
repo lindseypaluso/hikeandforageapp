@@ -8,7 +8,7 @@ body {
 }
 
 .carousel-inner {
-  border-bottom: 2px solid white;
+  box-shadow: 3px 3px 5px grey;
 }
 
 .text-shadow {
@@ -48,31 +48,26 @@ body {
   list-style-type: none;
 }
 
-.plant-space {
-  background-color: rgb(239, 243, 240);
+.plant-space, .contact-space {
+  background-color: rgb(247, 247, 247);
 }
 
-.plants-header-box {
-  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
+.page-header-box {
+  background-image: url("images/photo-1425736317462-a103b1303a35 copy 2.jpeg");
   color: white;
   height: 100px;
   margin-top: 50px;
   text-align: center;
   font-size: 60px;
   padding: 10px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  box-shadow: 3px 3px 5px grey;
 }
 
 .card {
   margin: auto;
   margin-top: 40px;
   margin-bottom: 30px;
-  border: 1px solid gray;
-}
-
-h5 {
-  text-align: center;
+  box-shadow: 3px 3px 5px grey;
 }
 
 #plant-button {
@@ -87,9 +82,60 @@ h5 {
   background-color: rgb(32, 53, 37);
 }
 
-.card-title {
-  padding: 0px;
+.form {
+  box-shadow: 3px 3px 5px grey;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 30px;
+  font-family: 'Manrope', sans-serif;
+  background-color: white;
+  height: 500px;
 }
+
+.contact-btn {
+  color: white;
+  font-size: 15px;
+  background-color: rgb(32, 53, 37);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.form-check {
+  margin: auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.contact-image {
+  float: left; 
+  width: 280px; 
+  margin-left: 35px; 
+  margin-top: 5px; 
+  box-shadow: 3px 3px 5px grey;
+}
+
+.modal-img {
+  float: left; 
+  width: 300px; 
+  margin-left: 20px; 
+  margin-top: 10px; 
+  box-shadow: 3px 3px 5px grey;
+}
+
+.modal-text {
+  float: right; 
+  width: 400px; 
+  margin-right: 20px; 
+  margin-top: 10px;
+}
+
+
+
+
+
+
 
 
 
@@ -98,6 +144,7 @@ footer {
   background-color: white;
   color: rgb(44, 66, 44); 
   font-size: 25px;
+  box-shadow: 3px 3px 5px grey;
 }
 
 a:hover {
