@@ -1,5 +1,9 @@
+/* Text styling */
 body {
   font-family: 'Gotu', sans-serif;
+}
+a:hover {
+  color: white;
 }
 
 .text-shadow {
@@ -8,13 +12,14 @@ body {
 }
 
 .carousel-inner {
-  border-bottom: 2px solid white;
+  box-shadow: 3px 3px 5px grey;
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 2px #29472A;
-}
+a:link, a:visited {
+  color: rgb(63, 85, 63); 
+} 
 
+/* Nav */
 .nav {
   position: absolute;
   text-align: right;
@@ -22,15 +27,17 @@ body {
   right: 35px;
   z-index: 1;
 }
-
-.logo {
-  position: absolute;
-  /* background:rgba(255,255,255, 0.7); */
-  top: -5px;
-  width: 170px;
-  /* height: 200px; */
+.text-shadow {
+  text-shadow: 2px 2px 2px #29472A;
+  font-family: 'Gotu', sans-serif;
 }
 
+/* Logo */
+.logo {
+  position: absolute;
+  top: -5px;
+  width: 170px;
+}
 .logo-link {
   position: absolute;
   top: 0px;
@@ -39,80 +46,66 @@ body {
   z-index: 1;
 }
 
+/* Form */
+.hike-search {
+  position: absolute;
+  z-index: 1;
+}
+.form-control {
+  font-size: 12px;
+  color: lightslategray;
+}
+.search-button {
+  background-color: rgb(44, 66, 44);
+}
+
+/* Map */
+.map-section {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+
+/* Plant side bar, Only on larger screens*/
 .side-bar {
   background-color: white;
   color: rgb(44, 66, 44);
 }
-
 .plant-list {
   list-style-type: none;
 }
-
-.plant-space {
-  background-color: rgb(239, 243, 240);
-}
-
-.plants-header-box {
-  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
-  color: white;
-  height: 100px;
-  margin-top: 50px;
-  text-align: center;
-  font-size: 60px;
-  padding: 10px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-}
-
-.card {
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  border: 1px solid gray;
-}
-
-h5 {
-  text-align: center;
-}
-
-#plant-button {
-  color: white;
-  font-size: 12px;
-  background-color: rgb(32, 53, 37);
-}
-
-#modal-button {
-  color: white;
-  font-size: 12px;
-  background-color: rgb(32, 53, 37);
-}
-
-.card-title {
-  padding: 0px;
-}
-
-
-
-
-footer {
-  background-color: white;
-  color: rgb(44, 66, 44); 
-  font-size: 25px;
-}
-
-a:hover {
-  color: white;
-}
-
-a:link, a:visited {
-  color: rgb(63, 85, 63); 
-} 
-
+/* Plant bar beneath map (only on smaller screen sizes) */
 .bottom-bar {
   display: none;
   color: rgb(44, 66, 44);
 }
 
+/* Responsive features to show and nav plant sections by screen size */
+@media only screen and (max-width: 991px){
+  .side-bar {
+  display: none;
+  }
+  .bottom-bar {
+    display: inherit;
+  }
+}
+@media only screen and (max-width: 768px){
+  .map-box {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 640px){
+  .map-box {
+    width: 100%;
+    height: 300px;
+}
+  }
+
+/* Recipe Section */
 .card-title {
   position: absolute;
   bottom: 10px;
@@ -123,45 +116,52 @@ a:link, a:visited {
   color: rgb(44, 66, 44);
 }
 
-.plant-icons {
+/* Footer */
+footer {
+  background-color: white;
+  color: rgb(44, 66, 44); 
   font-size: 25px;
 }
 
-.map-plants {
-  border-top: 2px solid rgb(188, 196, 190);
-  border-bottom: 2px solid rgb(188, 196, 190);
+/* Plant Page */
+.plants-header-box {
+  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
 }
 
-.map-box {
-  width: 100%;
-  height: 500px;
+.plant-space, .contact-space {
+  background-color: rgb(247, 247, 247);
 }
 
-@media only screen and (max-width: 991px){
-  .side-bar {
-  display: none;
-  }
-
-  .bottom-bar {
-    display: inherit;
-  }
+.page-header-box {
+  background-image: url("images/photo-1425736317462-a103b1303a35 copy 2.jpeg");
+  color: white;
+  height: 100px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 60px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px grey;
 }
 
-@media only screen and (max-width: 768px){
-  .map-box {
-    width: 100%;
-    height: 400px;
-  }
+/* Too broad, interferes with homepage, choose different class*/
+/* h5 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 5px grey;
+} */
+#plant-button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(32, 53, 37);
+}
+#modal-button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(32, 53, 37);
 }
 
-@media only screen and (max-width: 640px){
-  .map-box {
-    width: 100%;
-    height: 300px;
-}
-
-  }
-
+/* Scroll animations */
   #reveal2 {
 		opacity: 0;
 		-webkit-transform: rotate(40deg) scale(0.5);
