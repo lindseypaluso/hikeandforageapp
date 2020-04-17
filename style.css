@@ -1,5 +1,9 @@
+/* Text styling */
 body {
   font-family: 'Gotu', sans-serif;
+}
+a:hover {
+  color: white;
 }
 
 .text-shadow {
@@ -11,10 +15,11 @@ body {
   box-shadow: 3px 3px 5px grey;
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 2px #29472A;
-}
+a:link, a:visited {
+  color: rgb(63, 85, 63); 
+} 
 
+/* Nav */
 .nav {
   position: absolute;
   text-align: right;
@@ -23,14 +28,12 @@ body {
   z-index: 1;
 }
 
+/* Logo */
 .logo {
   position: absolute;
-  /* background:rgba(255,255,255, 0.7); */
   top: -5px;
   width: 170px;
-  /* height: 200px; */
 }
-
 .logo-link {
   position: absolute;
   top: 0px;
@@ -39,15 +42,94 @@ body {
   z-index: 1;
 }
 
+/* Form */
+.hike-search {
+  position: absolute;
+  z-index: 1;
+}
+.form-control {
+  font-size: 12px;
+  color: lightslategray;
+}
+.search-button {
+  background-color: rgb(44, 66, 44);
+}
+
+/* Map */
+.map-section {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+
+/* Plant side bar, Only on larger screens*/
 .side-bar {
   background-color: white;
   color: rgb(44, 66, 44);
 }
-
 .plant-list {
   list-style-type: none;
 }
 
+/* Plant bar beneath map (only on smaller screen sizes) */
+.bottom-bar {
+  display: none;
+  color: rgb(44, 66, 44);
+}
+
+/* Responsive features to show and nav plant sections by screen size */
+@media only screen and (max-width: 991px){
+  .side-bar {
+  display: none;
+  }
+  .bottom-bar {
+    display: inherit;
+  }
+}
+@media only screen and (max-width: 768px){
+  .map-box {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 640px){
+  .map-box {
+    width: 100%;
+    height: 300px;
+}
+  }
+
+/* Recipe Section */
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: rgb(44, 66, 44); 
+  font-size: 25px;
+}
+
+/* Page header */
+.page-header {
+  background-image: url("images/mtns2.jpeg");
+  width: 100%;
+  height: 250px;
+  box-shadow: 0px 3px 5px grey;
+  margin-bottom: 10px;
+}
+
+/* Plant Page */
 .plant-space, .contact-space, .about-space {
   background-color: rgb(247, 247, 247);
 }
@@ -85,22 +167,28 @@ body {
   float: right;
 }
 
+#plant-button {
+  color: white;
+  font-size: 12px;
+  background-color: rgb(32, 53, 37);
+}
 #modal-button {
   color: white;
   font-size: 12px;
   background-color: rgb(32, 53, 37);
 }
 
-.form {
-  box-shadow: 3px 3px 5px grey;
-  border-radius: 10px;
-  margin: 40px;
-  padding: 30px;
-  font-family: 'Manrope', sans-serif;
-  background-color: white;
-  height: 500px;
+/* Hike Page */
+
+.hike-image {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  object-position: 20%;
+  overflow: hidden;
 }
 
+/* Contact Page */
 .contact-btn {
   color: white;
   font-size: 18px;
@@ -113,18 +201,39 @@ body {
   margin: auto;
 }
 
-label {
-  margin-bottom: 5px;
-}
-
 .contact-image {
   float: left; 
   width: 280px; 
-  margin-left: 35px; 
-  margin-top: 5px; 
+  margin: 40px 40px 40px 55px;
   box-shadow: 3px 3px 5px grey;
 }
 
+.contact-form-box {
+  height: 500px;
+  background-color: white;
+  box-shadow: 3px 3px 5px grey;
+  margin: 40px 55px 40px 40px;
+  font-family: 'Manrope', sans-serif;
+  border-radius: 10px;
+}
+
+.contact-form {
+  margin: 40px 50px 0px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Plant modals */
 .modal-img {
   float: left; 
   width: 300px; 
@@ -140,6 +249,14 @@ label {
   margin-top: 10px;
 }
 
+.modal-recipe-link {
+  float: right; 
+  width: 400px; 
+  margin-right: 20px; 
+  margin-top: 10px;
+}
+
+/* About page */
 .about-box {
   box-shadow: 3px 3px 5px grey;
   border-radius: 10px;
@@ -165,14 +282,11 @@ label {
   margin-left: 35px;
   margin-top: 15px;
   margin-right: 15px;
+  font-size: 18px;
+  text-align: center;
 }
 
-
-
-
-
-
-
+/* Footer */
 footer {
   background-color: white;
   color: rgb(44, 66, 44); 
@@ -242,6 +356,7 @@ a:link, a:visited {
 
   }
 
+/* Scroll animations */
   #reveal2 {
 		opacity: 0;
 		-webkit-transform: rotate(40deg) scale(0.5);

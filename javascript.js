@@ -7,6 +7,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlc
         style: 'mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe'
     });
     map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl());
 
 
 //var controller = new ScrollMagic.Controller();
@@ -38,7 +39,7 @@ $("#run-search").on("click", function (event) {
 
   //example query address Request URL https://www.zipcodeapi.com/rest/eiMJSnusnRhK27BSYzaXpC1mEKx9GNMXWrek6eg5APEehdlD7mf5CJNoOut5Kosc/info.json/84097/degrees
   //parse together the required arguments for the zipcode api
-  var zipQueryURL = "https://www.zipcodeapi.com/rest/" + zipKey + "/info.json/" + zipcode + "/degrees";
+  var zipQueryURL = "https://cors-anywhere.herokuapp.com/https://www.zipcodeapi.com/rest/" + zipKey + "/info.json/" + zipcode + "/degrees";
   //create ajax call
   console.log(zipQueryURL);
   $.ajax({
@@ -48,7 +49,8 @@ $("#run-search").on("click", function (event) {
   }).then(function (zipResponse) {
     console.log(zipResponse);
     //make variable to store the query data
-    result = zipResponse.data;
+    result = zipResponse;
+    console.log(zipResponse.lat);
     var lat = result.lat;
     console.log(lat);  
     var long = result.lng;
@@ -67,27 +69,30 @@ $("#run-search").on("click", function (event) {
       console.log(trailsResponse);
       //make variable to store the query data
       //what is "result"? Can I use it twice in the same function since it's separated by an ajax call?
-      result = trailsResponse.data;
+      result = trailsResponse.trails;
 
       //create a for loop that displays the hike name, difficulty, length, and plant
-      for (var i = 0; i < trailsResponse.length; i++) {
+      for (var i = 0; i < result.length; i++) {
         var hikeDiv = $("<div>");
-        $(hikeDiv).attr("class", "hikeDiv");
+        $(hikeDiv).attr("class", "hikeDiv w-50 float-left");
 
         var hikeName = $("<h4>");
-        $(hikeName).text(result[i].trails.name);
+        $(hikeName).text(result[i].name);
         var hikeImg = $("<img>");
-        $(hikeImg).attr("src", result[i].trails.imgSqSmall);
+        $(hikeImg).attr("src", result[i].imgSqSmall);
+        $(hikeImg).attr("class", "hike-image")
+
         var hikeDiff = $("<p>");
-        $(hikeDiff).text("Difficulty: " + result[i].trails.difficulty);
+        $(hikeDiff).text("Difficulty: " + result[i].difficulty);
         var hikeLength = $("<p>");
-        $(hikeLength).text(result[i].trails.length + "miles");
+        $(hikeLength).text(result[i].length + "miles");
         var plantName = $("<p>");
         $(plantName).text("Plant found here: ");
 
         $(hikeDiv).append(hikeName, hikeImg, hikeDiff, hikeLength, plantName);
         $("#results-display").append(hikeDiv);
       }
+      $("#results-display").append("<div class='clearfix'></div>");
     })
   })
 })
@@ -108,6 +113,3 @@ $("#run-search").on("click", function (event) {
     //required: ids
     //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
   
-
-
-});
