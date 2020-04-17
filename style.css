@@ -72,7 +72,7 @@ body {
 
 .plant-card-title {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   z-index: 1;
   background:rgba(245, 255, 247, 0.8);
   padding: 10px 20px 10px 40px;
@@ -81,7 +81,6 @@ body {
   text-align: center;
   padding: 10px 15px 10px 15px;
   width: 214px;
-  height: 40px;
 }
 
 #modal-button {
