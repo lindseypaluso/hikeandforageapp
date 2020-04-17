@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    -->
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -82,119 +82,43 @@
         </div>
     </div>
 
-
-    <div class="container-fluid map-plants p-0">
-        <div class="row pr-0 mr-0">
-            <div class="map-box col-lg-9 col-mg-12 p-0" id='map'></div>
-            <div class="side-bar col-lg-3 p-3 my-auto">
-                <ul class="plant-list">
-                    <h5 class="pb-3">Plants go here on larger screens</h5>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>June Berry</a>
-                    </li>
-
-
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>White Sage</a>
-                    </li>
-                    <li class="pb-1">
-
-                        <i class="fa fa-leaf pr-2"></i>Inky Cap Mushrooms</a>
-                    </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Elderberry Flowers</a>
-                    </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Wild Spinach</a>
-                    </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Curly Dock</a>
-                    </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Wild Asparagus</a>
-                    </li>
-                    <li class="">
-                        <i class="fa fa-leaf pr-2"></i>White Mulberry</a>
-
-                    </li>
-                </ul>
+    <div class="container-fluid contact-space p-0">
+        <div class=row>
+            <div class="col-lg-12">
+                <div class="page-header-box">Contact</div>
             </div>
         </div>
-    </div>
-    <div>
-   
-
-        <!-- create empty div for ScrollMagic trigger to hide logo  
-        set display of logo element to none via CSS class hidden or jquery .hide -->
-
-        <div class="bottom-bar container-fluid pt-4 pb-4 shadow text-center">
-            Plant icons go here on smaller screens
-            <div class="plant-icons row pt-2">
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-            </div>
-            
-        </div>
-
-        <!--display the form for inputing a search to bring back results on potential hikes-->
-        <div class="container-fluid pt-5 pb-5 shadow text-center">
-            <div id="search-hikes">
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"></i>Search for a hike</h3>
-                    </div>
-                    <div class="panel-body">
-                        <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form">
-                            <!-- Here we create the text box for capturing the zipcode-->
-                            <div class="form-group row">
-                                <label for="zip">Zipcode</label>
-                                <input name="zip" type="text" pattern="[0-9]*" class="form-control" id="zip">
+        
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 my-auto">
+                <div class="form">
+                    <img src="images/photo-1528539054466-ccb019c0862c.jpeg" class="contact-image" width="250px" alt="wildflowers">
+                    <form style="float:right; width:400px; margin-right:35px;">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input class="form-control" type="text"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email address</label>
+                            <input type="email" class="form-control" id="contact-email" placeholder="name@example.com" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="contact-button-box text-center">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="materialUnchecked" name="materialRadio">
+                                <label class="form-check-label" for="materialUnchecked" style="margin-top: 4px;">Click here to receive our newsletter!</label>
                             </div>
-                            <div class="form-group row">
-                                <label for="maxDistance">Maximum Distance (in miles)</label>
-                                <input name="distance" type="number" class="form-control" id="maxDistance">
-                            </div>
-                            <div class="form-group row">
-                                <label for="maxResults">Maximum Number of Results</label>
-                                <input name="results" type="number" class="form-control" id="maxResults">
-                            </div>
-                            <!-- Here we have our final submit button -->
-                            <button class="btn btn-default" id="run-search"><i class="fa fa-search"></i>Search</button>
-                        </form>
-                    </div>
+                            <button type="submit" class="btn contact-btn btn-lg">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-        <!--For now, this can display the results from the user input and the query-->
-        <div id="results-display"></div>
-
-        <!-- Images need a banner or label with a recipe name & Link -->
-        <div class="container-fluid p-0">
-            <div class="row m-0">
-                    <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
-                        <div class="card-title">Herbed Butter</div>
-                    </div>
-                        <div class="card border-0 p-0 col-4">  
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
-                    <div class="card-title">Blueberry & Wild Mint</div>
-                    </div> 
-                    <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
-                    <div class="card-title">Roasted Ferns</div>
-                    </div>     
-            </div>
+            <div class="col-lg-2"></div>
         </div>
 
         <footer class="container-fluid text-center border-0 rounded-0 pl-0 pr-0 pt-4 pb-4 shadow">
@@ -203,8 +127,8 @@
             <a href=""><i class="fa fa-pinterest p-1"></i></a>
             <a href="https://github.com/lindseypaluso/project1"><i class="fa fa-git p-1"></i></a>
         </footer>
-
     </div>
+
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
          <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
