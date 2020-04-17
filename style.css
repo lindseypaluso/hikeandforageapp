@@ -10,7 +10,10 @@ body {
 
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
+<<<<<<< HEAD
   font-family: 'Spartan', sans-serif;
+=======
+>>>>>>> a17196cb39909b7b619eeb1dc5265f4b7f205a36
 }
 
 .carousel-inner {
