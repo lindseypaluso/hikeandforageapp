@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -19,16 +17,16 @@
 <body>
 
     <div class="container-fluid p-0">
-        <nav
-            class="navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light bg-white static-top shadow p-0 fixed-top">
-
-            <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4"
-                    src="images/h&f-logo5.png"></a>
-            <div class="nav">
+        <nav class="navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light static-top p-0 fixed-top"
+            id="navlinks">
+            <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4" src="images/h&f-logo5.png" id="logo"></a>
+            <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4" src="images/logo2.png" id="logo2"></a>
+            <div class="nav" id="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white text-shadow" href="plants.html"><i class="fa fa-leaf pr-2"></i>plants</a>
-           
+                        <a class="nav-link text-white text-shadow" href="plants.html"><i
+                                class="fa fa-leaf pr-2"></i>plants</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link current-page text-white text-shadow" href="hikes.html"><i
@@ -137,8 +135,8 @@
                         <a href="" class="col-9 my-auto">Wild Spinach</a>
                     </li>
                     <li class="pb-2 row">
-                        <a href="" class="col-3"><img class="img-fluid" src="images/cattails.png"></a>
-                        <a href="" class="col-9 my-auto">Cattails</a>
+                        <a href="" class="col-3"><img class="img-fluid" src="images/asparagus.png"></a>
+                        <a href="" class="col-9 my-auto">Wild Asparagus</a>
                     </li>
                     <li class="pb-2 row">
                         <a href="" class="col-3"><img class="img-fluid" src="images/whitemulberry.png"></a>
@@ -153,7 +151,7 @@
         </div>
     </div>
     <div>
-   
+
 
         <!-- create empty div for ScrollMagic trigger to hide logo  
         set display of logo element to none via CSS class hidden or jquery .hide -->
@@ -166,7 +164,7 @@
                 <img class="img-fluid col-md-1 col-3" src="images/inkycap.png">
                 <img class="img-fluid col-md-1 col-3" src="images/elderberry.png">
                 <img class="img-fluid col-md-1 col-3" src="images/wildspinach.png">
-                <img class="img-fluid col-md-1 col-3" src="images/cattails.png">
+                <img class="img-fluid col-md-1 col-3" src="images/asparagus.png">
                 <img class="img-fluid col-md-1 col-3" src="images/whitemulberry.png">
                 <img class="img-fluid col-md-1 col-3" src="images/pinecone.png">
                 <div class="col-md-2 col-sm-0"></div>
@@ -179,21 +177,23 @@
        
         <div class="container-fluid p-0">
             <div class="row m-0">
-                    <div class="card border-0 p-0 col-4">
+                <div class="card border-0 p-0 col-4">
                     <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
-                        <div class="card-title">Herbed Butter</div>
-                    </div>
-                        <div class="card border-0 p-0 col-4">  
+                    <div class="card-title">Herbed Butter</div>
+                </div>
+                <div class="card border-0 p-0 col-4">
                     <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
                     <div class="card-title">Blueberry & Wild Mint</div>
-                    </div> 
-                    <div class="card border-0 p-0 col-4">
+                </div>
+                <div class="card border-0 p-0 col-4">
                     <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
                     <div class="card-title">Roasted Ferns</div>
-                    </div>
-                
+                </div>
             </div>
         </div>
+
+
+
 
         <footer class="container-fluid text-center border-0 rounded-0 pl-0 pr-0 pt-4 pb-4 shadow">
             <a href=""><i class="fa fa-facebook-official p-1"></i></a>
@@ -203,16 +203,16 @@
         </footer>
 
     </div>
-        <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
-         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-        <script src="javascript.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
 
 </body>
 
