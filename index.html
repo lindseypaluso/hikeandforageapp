@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    -->
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -145,6 +146,39 @@
             
         </div>
 
+        <!--display the form for inputing a search to bring back results on potential hikes-->
+        <div class="container-fluid pt-5 pb-5 shadow text-center">
+            <div id="search-hikes">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"></i>Search for a hike</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Here we create an HTML Form for handling the inputs-->
+                        <form role="form">
+                            <!-- Here we create the text box for capturing the zipcode-->
+                            <div class="form-group row">
+                                <label for="zip">Zipcode</label>
+                                <input name="zip" type="text" pattern="[0-9]*" class="form-control" id="zip">
+                            </div>
+                            <div class="form-group row">
+                                <label for="maxDistance">Maximum Distance (in miles)</label>
+                                <input name="distance" type="number" class="form-control" id="maxDistance">
+                            </div>
+                            <div class="form-group row">
+                                <label for="maxResults">Maximum Number of Results</label>
+                                <input name="results" type="number" class="form-control" id="maxResults">
+                            </div>
+                            <!-- Here we have our final submit button -->
+                            <button class="btn btn-default" id="run-search"><i class="fa fa-search"></i>Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--For now, this can display the results from the user input and the query-->
+        <div id="results-display"></div>
+
         <!-- Images need a banner or label with a recipe name & Link -->
         <div class="container-fluid p-0">
             <div class="row m-0">
@@ -152,7 +186,7 @@
                     <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
                         <div class="card-title">Herbed Butter</div>
                     </div>
-                     <div class="card border-0 p-0 col-4">  
+                        <div class="card border-0 p-0 col-4">  
                     <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
                     <div class="card-title">Blueberry & Wild Mint</div>
                     </div> 
