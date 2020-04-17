@@ -48,7 +48,7 @@ body {
   list-style-type: none;
 }
 
-.plant-space, .contact-space {
+.plant-space, .contact-space, .about-space {
   background-color: rgb(247, 247, 247);
 }
 
@@ -63,17 +63,25 @@ body {
   box-shadow: 3px 3px 5px grey;
 }
 
-.card {
+.plant-card {
   margin: auto;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   box-shadow: 3px 3px 5px grey;
 }
 
-#plant-button {
-  color: white;
-  font-size: 12px;
-  background-color: rgb(32, 53, 37);
+.plant-card-title {
+  position: absolute;
+  bottom: 40px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+  text-align: center;
+  padding: 10px 15px 10px 15px;
+  width: 214px;
+  height: 40px;
 }
 
 #modal-button {
@@ -131,8 +139,32 @@ label {
   margin-top: 10px;
 }
 
+.about-box {
+  box-shadow: 3px 3px 5px grey;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+  background-color: white;
+  height: 500px;
+}
 
+.about-image {
+  float: right; 
+  width: 310px; 
+  margin-right: 35px; 
+  margin-top: 15px;
+  box-shadow: 3px 3px 5px grey;
+  margin-left: 15px;
+}
 
+.about-text {
+  float: left; 
+  width: 390px;
+  margin-left: 35px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
 
 
 
