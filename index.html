@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -83,39 +83,71 @@
     </div>
 
 
-    <div class="container-fluid map-plants p-0">
+    <div class="container-fluid map-section p-0">
         <div class="row pr-0 mr-0">
+            <!--display the form for inputing a search to bring back results on potential hikes-->
+            <div id="search-hikes">
+                <div class="panel hike-search col-10 ml-2">
+                    <div class="panel-heading">
+                        <p class="panel-title pt-2"><strong>Hike Search</strong></p>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Here we create an HTML Form for handling the inputs-->
+                        <form role="form" class="col-lg-5 col-md-7 col-sm-8 col-10 pl-0">
+                            <!-- Here we create the text box for capturing the zipcode-->
+                            <div class="form-group row">
+                                <label class="my-auto text-left" for="zip"></label>
+                                <input name="zip" type="text" pattern="[0-9]*" class="form-control col-4 ml-3" id="zip" placeholder="Zipcode">
+                            </div>
+                            <div class="form-group row">
+                                <label class="my-auto text-left" for="maxDistance"></label>
+                                <input name="distance" type="number" class="form-control col-4 ml-3" id="maxDistance" placeholder="Distance (m)">
+                            </div>
+                            <div class="form-group row">
+                                <label for="maxResults"></label>
+                                <input name="results" type="number" class="form-control col-4 ml-3" id="maxResults" placeholder="# of Hikes">
+                            </div>
+                            <!-- Here we have our final submit button -->
+                            <button class="btn btn-default search-button text-white text-center" id="run-search"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="map-box col-lg-9 col-mg-12 p-0" id='map'></div>
-            <div class="side-bar col-lg-3 p-3 my-auto">
-                <ul class="plant-list">
-                    <h5 class="pb-3">Plants go here on larger screens</h5>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>June Berry</a>
+            <div class="side-bar col-lg-3 my-auto">
+                <ul class="plant-list p-2">
+                    <h5 class="pb-3 lead">What do you want to find?</h5>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/juneberries.png"></a>
+                        <a href="" class="col-9 my-auto">Juneberries</a>
                     </li>
-
-
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>White Sage</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/sageleaves.png"></a>
+                        <a href="" class="col-9 my-auto">White Sage</a>
                     </li>
-                    <li class="pb-1">
-
-                        <i class="fa fa-leaf pr-2"></i>Inky Cap Mushrooms</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/inkycap.png"></a>
+                        <a href="" class="col-9 my-auto">Inky Cap Mushrooms</a>
                     </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Elderberry Flowers</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/elderberry.png"></a>
+                        <a href="" class="col-9 my-auto">Elderberry Flowers</a>
                     </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Wild Spinach</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/wildspinach.png"></a>
+                        <a href="" class="col-9 my-auto">Wild Spinach</a>
                     </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Curly Dock</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/cattails.png"></a>
+                        <a href="" class="col-9 my-auto">Cattails</a>
                     </li>
-                    <li class="pb-1">
-                        <i class="fa fa-leaf pr-2"></i>Wild Asparagus</a>
+                    <li class="pb-2 row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/whitemulberry.png"></a>
+                        <a href="" class="col-9 my-auto">White Mulberry</a>
                     </li>
-                    <li class="">
-                        <i class="fa fa-leaf pr-2"></i>White Mulberry</a>
-
+                    <li class="row">
+                        <a href="" class="col-3"><img class="img-fluid" src="images/pinecone.png"></a>
+                        <a href="" class="col-9 my-auto">Pine Nuts</a>
                     </li>
                 </ul>
             </div>
@@ -127,59 +159,24 @@
         <!-- create empty div for ScrollMagic trigger to hide logo  
         set display of logo element to none via CSS class hidden or jquery .hide -->
 
-        <div class="bottom-bar container-fluid pt-4 pb-4 shadow text-center">
-            Plant icons go here on smaller screens
-            <div class="plant-icons row pt-2">
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-                <i class="fa fa-leaf col-1"></i>
-            </div>
-            
-        </div>
-
-        <!--display the form for inputing a search to bring back results on potential hikes-->
-        <div class="container-fluid pt-5 pb-5 pl-5 pr-5 shadow text-center">
-            <div id="search-hikes">
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"></i>Search for a hike</h3>
-                    </div>
-                    <div class="panel-body">
-                        <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form">
-                            <!-- Here we create the text box for capturing the zipcode-->
-                            <div class="form-group row">
-                                <label for="zip">Zipcode</label>
-                                <input name="zip" type="text" pattern="[0-9]*" class="form-control" id="zip">
-                            </div>
-                            <div class="form-group row">
-                                <label for="maxDistance">Maximum Distance (in miles)</label>
-                                <input name="distance" type="number" class="form-control" id="maxDistance">
-                            </div>
-                            <div class="form-group row">
-                                <label for="maxResults">Maximum Number of Results</label>
-                                <input name="results" type="number" class="form-control" id="maxResults">
-                            </div>
-                            <!-- Here we have our final submit button -->
-                            <button class="btn btn-default" id="run-search"><i class="fa fa-search"></i>Search</button>
-                        </form>
-                    </div>
-                </div>
+        <div class="bottom-bar container-fluid pt-3 pb-3 shadow">
+            <div class="row">
+                <div class="col-md-2 col-sm-0"></div>
+                <img class="img-fluid col-md-1 col-3" src="images/juneberries.png">
+                <img class="img-fluid col-md-1 col-3" src="images/sageleaves.png">
+                <img class="img-fluid col-md-1 col-3" src="images/inkycap.png">
+                <img class="img-fluid col-md-1 col-3" src="images/elderberry.png">
+                <img class="img-fluid col-md-1 col-3" src="images/wildspinach.png">
+                <img class="img-fluid col-md-1 col-3" src="images/cattails.png">
+                <img class="img-fluid col-md-1 col-3" src="images/whitemulberry.png">
+                <img class="img-fluid col-md-1 col-3" src="images/pinecone.png">
+                <div class="col-md-2 col-sm-0"></div>
             </div>
         </div>
-        <!--For now, this can display the results from the user input and the query-->
-        <div id="results-display" class="container-fluid pt-5 pb-5"></div>
+       
+    <!--For now, this can display the results from the user input and the query-->
+    <div id="results-display" class="container-fluid pt-5 pb-5"></div>
 
-        <!-- Images need a banner or label with a recipe name & Link -->
         <div class="container-fluid p-0">
             <div class="row m-0">
                     <div class="card border-0 p-0 col-4">
@@ -193,7 +190,8 @@
                     <div class="card border-0 p-0 col-4">
                     <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
                     <div class="card-title">Roasted Ferns</div>
-                    </div>     
+                    </div>
+                
             </div>
         </div>
 

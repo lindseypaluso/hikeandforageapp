@@ -7,6 +7,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlc
         style: 'mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe'
     });
     map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl());
 
 
 //var controller = new ScrollMagic.Controller();

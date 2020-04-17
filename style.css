@@ -1,5 +1,9 @@
+/* Text styling */
 body {
   font-family: 'Gotu', sans-serif;
+}
+a:hover {
+  color: white;
 }
 
 .text-shadow {
@@ -11,10 +15,11 @@ body {
   box-shadow: 3px 3px 5px grey;
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 2px #29472A;
-}
+a:link, a:visited {
+  color: rgb(63, 85, 63); 
+} 
 
+/* Nav */
 .nav {
   position: absolute;
   text-align: right;
@@ -22,15 +27,17 @@ body {
   right: 35px;
   z-index: 1;
 }
-
-.logo {
-  position: absolute;
-  /* background:rgba(255,255,255, 0.7); */
-  top: -5px;
-  width: 170px;
-  /* height: 200px; */
+.text-shadow {
+  text-shadow: 2px 2px 2px #29472A;
+  font-family: 'Gotu', sans-serif;
 }
 
+/* Logo */
+.logo {
+  position: absolute;
+  top: -5px;
+  width: 170px;
+}
 .logo-link {
   position: absolute;
   top: 0px;
@@ -39,13 +46,87 @@ body {
   z-index: 1;
 }
 
+/* Form */
+.hike-search {
+  position: absolute;
+  z-index: 1;
+}
+.form-control {
+  font-size: 12px;
+  color: lightslategray;
+}
+.search-button {
+  background-color: rgb(44, 66, 44);
+}
+
+/* Map */
+.map-section {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+
+/* Plant side bar, Only on larger screens*/
 .side-bar {
   background-color: white;
   color: rgb(44, 66, 44);
 }
-
 .plant-list {
   list-style-type: none;
+}
+
+/* Plant bar beneath map (only on smaller screen sizes) */
+.bottom-bar {
+  display: none;
+  color: rgb(44, 66, 44);
+}
+
+/* Responsive features to show and nav plant sections by screen size */
+@media only screen and (max-width: 991px){
+  .side-bar {
+  display: none;
+  }
+  .bottom-bar {
+    display: inherit;
+  }
+}
+@media only screen and (max-width: 768px){
+  .map-box {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 640px){
+  .map-box {
+    width: 100%;
+    height: 300px;
+}
+  }
+
+/* Recipe Section */
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: rgb(44, 66, 44); 
+  font-size: 25px;
+}
+
+/* Plant Page */
+.plants-header-box {
+  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
 }
 
 .plant-space, .contact-space {
@@ -63,35 +144,35 @@ body {
   box-shadow: 3px 3px 5px grey;
 }
 
-.card {
-  margin: auto;
+/* Too broad, interferes with homepage, choose different class*/
+/* h5 {
+  text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
   box-shadow: 3px 3px 5px grey;
-}
-
+} */
 #plant-button {
   color: white;
   font-size: 12px;
   background-color: rgb(32, 53, 37);
 }
-
 #modal-button {
   color: white;
   font-size: 12px;
   background-color: rgb(32, 53, 37);
 }
 
-.form {
-  box-shadow: 3px 3px 5px grey;
-  border-radius: 10px;
-  margin: 40px;
-  padding: 30px;
-  font-family: 'Manrope', sans-serif;
-  background-color: white;
-  height: 500px;
+/* Hike Page */
+
+.hike-image {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  object-position: 20%;
+  overflow: hidden;
 }
 
+/* Contact Page */
 .contact-btn {
   color: white;
   font-size: 15px;
@@ -102,10 +183,6 @@ body {
 
 .form-check {
   margin: auto;
-}
-
-label {
-  margin-bottom: 5px;
 }
 
 .contact-image {
@@ -131,83 +208,7 @@ label {
   margin-top: 10px;
 }
 
-.hike-image {
-  object-fit: cover;
-  height: 100px;
-  width: 100px;
-  object-position: 20%;
-  overflow: hidden;
-}
-
-footer {
-  background-color: white;
-  color: rgb(44, 66, 44); 
-  font-size: 25px;
-  box-shadow: 3px 3px 5px grey;
-}
-
-a:hover {
-  color: white;
-}
-
-a:link, a:visited {
-  color: rgb(63, 85, 63); 
-} 
-
-.bottom-bar {
-  display: none;
-  color: rgb(44, 66, 44);
-}
-
-.card-title {
-  position: absolute;
-  bottom: 10px;
-  z-index: 1;
-  background:rgba(245, 255, 247, 0.8);
-  padding: 10px 20px 10px 40px;
-  font-weight: bold;
-  color: rgb(44, 66, 44);
-}
-
-.plant-icons {
-  font-size: 25px;
-}
-
-.map-plants {
-  border-top: 2px solid rgb(188, 196, 190);
-  border-bottom: 2px solid rgb(188, 196, 190);
-}
-
-.map-box {
-  width: 100%;
-  height: 500px;
-}
-
-@media only screen and (max-width: 991px){
-  .side-bar {
-  display: none;
-  }
-
-  .bottom-bar {
-    display: inherit;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .map-box {
-    width: 100%;
-    height: 400px;
-  }
-}
-
-@media only screen and (max-width: 640px){
-  .map-box {
-    width: 100%;
-    height: 300px;
-}
-
-  }
-
+/* Scroll animations */
   #reveal2 {
 		opacity: 0;
 		-webkit-transform: rotate(40deg) scale(0.5);
