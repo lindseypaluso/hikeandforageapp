@@ -1,10 +1,10 @@
 body {
-  font-family: 'Gotu', sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
-  font-family: 'Gotu', sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 
 .carousel-inner {
@@ -25,8 +25,13 @@ body {
 
 .logo {
   position: absolute;
-  /* background:rgba(255,255,255, 0.7); */
   top: -5px;
+  width: 170px;
+  /* height: 200px; */
+}
+
+.logo2 {
+  position: absolute;
   width: 170px;
   /* height: 200px; */
 }
