@@ -10,17 +10,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlc
     map.addControl(new mapboxgl.NavigationControl());
 
 
-//var controller = new ScrollMagic.Controller();
-
-// new ScrollMagic.Scene({
-//   triggerElement: "#trigger2",
-//   triggerHook: 0.9,
-//   offset: 50, // move trigger to center of element
-//   reverse: false // only do once
-// })
-// .setClassToggle("#reveal2", "visible") // add class toggle
-// .addIndicators() // add indicators (requires plugin)
-// .addTo(controller);
 
 //Hiking Project Data API
 
@@ -112,4 +101,24 @@ $("#run-search").on("click", function (event) {
     //we could maybe use this for crowdedness or prettiness or dificulty? not sure what available conditions there are
     //required: ids
     //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
+
   
+
+
+});
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrolltop > 690 || document.documentElement.scrollTop > 690) {
+    document.getElementById("navlinks").style.height = "50px";
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("logo2").style.display = "block";
+    document.getElementById("navlinks").style.backgroundColor = "gray";
+  
+  } else {
+    document.getElementById("navlinks").style.backgroundColor = "transparent";
+    document.getElementById("logo").style.display = "block";
+    document.getElementById("logo2").style.display = "none";
+  }
+}

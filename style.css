@@ -1,6 +1,6 @@
 /* Text styling */
 body {
-  font-family: 'Gotu', sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 a:hover {
   color: white;
@@ -8,7 +8,7 @@ a:hover {
 
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
-  font-family: 'Gotu', sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 
 .carousel-inner {
@@ -34,6 +34,16 @@ a:link, a:visited {
   top: -5px;
   width: 170px;
 }
+<<<<<<< HEAD
+=======
+
+.logo2 {
+  position: absolute;
+  width: 170px;
+  /* height: 200px; */
+}
+
+>>>>>>> master
 .logo-link {
   position: absolute;
   top: 0px;
