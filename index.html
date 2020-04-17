@@ -99,21 +99,16 @@
                                 <label class="my-auto text-left" for="zip"></label>
                                 <input name="zip" type="text" pattern="[0-9]*" class="form-control col-4 ml-3" id="zip" placeholder="Zipcode">
                             </div>
-                            <div class="form-group row">
-                                <label class="my-auto text-left" for="maxDistance"></label>
-                                <input name="distance" type="number" class="form-control col-4 ml-3" id="maxDistance" placeholder="Distance (m)">
-                            </div>
-                            <div class="form-group row">
-                                <label for="maxResults"></label>
-                                <input name="results" type="number" class="form-control col-4 ml-3" id="maxResults" placeholder="# of Hikes">
-                            </div>
                             <!-- Here we have our final submit button -->
                             <button class="btn btn-default search-button text-white text-center" id="run-search"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
                 </div>
             </div>
+
+            <!--Map Display-->
             <div class="map-box col-lg-9 col-mg-12 p-0" id='map'></div>
+            <!--Plant Selectors-->
             <div class="side-bar col-lg-3 my-auto">
                 <ul class="plant-list p-2">
                     <h5 class="pb-3 lead">What do you want to find?</h5>
@@ -175,7 +170,7 @@
         </div>
        
     <!--For now, this can display the results from the user input and the query-->
-    <div id="results-display" class="container-fluid pt-5 pb-5"></div>
+    <div id="results-display" class="container-fluid"></div>
 
         <div class="container-fluid p-0">
             <div class="row m-0">
