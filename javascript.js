@@ -79,6 +79,8 @@ $("#run-search").on("click", function (event) {
         $(hikeName).text(result[i].name);
         var hikeImg = $("<img>");
         $(hikeImg).attr("src", result[i].imgSqSmall);
+        $(hikeImg).attr("class", "hike-image")
+
         var hikeDiff = $("<p>");
         $(hikeDiff).text("Difficulty: " + result[i].difficulty);
         var hikeLength = $("<p>");
