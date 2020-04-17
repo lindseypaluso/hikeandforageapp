@@ -77,6 +77,7 @@ a:link, a:visited {
 .plant-list {
   list-style-type: none;
 }
+
 /* Plant bar beneath map (only on smaller screen sizes) */
 .bottom-bar {
   display: none;
@@ -159,6 +160,52 @@ footer {
   color: white;
   font-size: 12px;
   background-color: rgb(32, 53, 37);
+}
+
+/* Hike Page */
+
+.hike-image {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  object-position: 20%;
+  overflow: hidden;
+}
+
+/* Contact Page */
+.contact-btn {
+  color: white;
+  font-size: 15px;
+  background-color: rgb(32, 53, 37);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.form-check {
+  margin: auto;
+}
+
+.contact-image {
+  float: left; 
+  width: 280px; 
+  margin-left: 35px; 
+  margin-top: 5px; 
+  box-shadow: 3px 3px 5px grey;
+}
+
+.modal-img {
+  float: left; 
+  width: 300px; 
+  margin-left: 20px; 
+  margin-top: 10px; 
+  box-shadow: 3px 3px 5px grey;
+}
+
+.modal-text {
+  float: right; 
+  width: 400px; 
+  margin-right: 20px; 
+  margin-top: 10px;
 }
 
 /* Scroll animations */
