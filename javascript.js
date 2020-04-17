@@ -73,7 +73,7 @@ $("#run-search").on("click", function (event) {
       //create a for loop that displays the hike name, difficulty, length, and plant
       for (var i = 0; i < result.length; i++) {
         var hikeDiv = $("<div>");
-        $(hikeDiv).attr("class", "hikeDiv");
+        $(hikeDiv).attr("class", "hikeDiv w-50 float-left");
 
         var hikeName = $("<h4>");
         $(hikeName).text(result[i].name);
@@ -89,6 +89,7 @@ $("#run-search").on("click", function (event) {
         $(hikeDiv).append(hikeName, hikeImg, hikeDiff, hikeLength, plantName);
         $("#results-display").append(hikeDiv);
       }
+      $("#results-display").append("<div class='clearfix'></div>");
     })
   })
 })
