@@ -131,14 +131,13 @@ label {
   margin-top: 10px;
 }
 
-
-
-
-
-
-
-
-
+.hike-image {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  object-position: 20%;
+  overflow: hidden;
+}
 
 footer {
   background-color: white;
