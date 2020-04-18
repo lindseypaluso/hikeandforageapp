@@ -62,15 +62,6 @@ a:link, a:visited {
   background-color: rgb(44, 66, 44);
 }
 
-/* Map */
-.map-section {
-  border-top: 2px solid rgb(188, 196, 190);
-  border-bottom: 2px solid rgb(188, 196, 190);
-}
-.map-box {
-  width: 100%;
-  height: 500px;
-}
 
 /* Plant side bar, Only on larger screens*/
 .side-bar {
@@ -364,4 +355,75 @@ a:link, a:visited {
 
 
       
-    
+/* Map */
+.map-section {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+.juneberries {
+  background-image: url('images/juneberries.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.inkycap {
+  background-image: url('images/inkycap.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.sage {
+  background-image: url('images/sageleaves.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.spinach {
+  background-image: url('images/wildspinach.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.asparagus {
+  background-image: url('images/asparagus.png');
+  background-size: cover;
+  width: 5em;
+  height: 5em;
+  cursor: pointer;
+}
+.pinecone {
+  background-image: url('images/pinecone.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.mulberry {
+  background-image: url('images/whitemulberry.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.elderberry {
+  background-image: url('images/elderberry.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 400px;
+}
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Gotu', sans-serif;
+}
