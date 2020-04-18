@@ -1,4 +1,6 @@
 $(document).ready(function() {
+$('#logo2').hide();
+
 
 // Map
 mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ';

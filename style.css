@@ -2,13 +2,14 @@
 body {
   font-family: 'Spartan', sans-serif;
 }
+
+
 a:hover {
   color: white;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
-  font-family: 'Spartan', sans-serif;
 }
 
 .carousel-inner {
@@ -34,16 +35,12 @@ a:link, a:visited {
   top: -5px;
   width: 170px;
 }
-<<<<<<< HEAD
-=======
 
-.logo2 {
-  position: absolute;
-  width: 170px;
+#logo2 {
+  top: -32px;
   /* height: 200px; */
 }
 
->>>>>>> master
 .logo-link {
   position: absolute;
   top: 0px;
@@ -83,7 +80,6 @@ a:link, a:visited {
 .plant-list {
   list-style-type: none;
 }
-
 /* Plant bar beneath map (only on smaller screen sizes) */
 .bottom-bar {
   display: none;
@@ -366,27 +362,6 @@ a:link, a:visited {
 
   }
 
-/* Scroll animations */
-  #reveal2 {
-		opacity: 0;
-		-webkit-transform: rotate(40deg) scale(0.5);
-			 -moz-transform: rotate(40deg) scale(0.5);
-				-ms-transform: rotate(40deg) scale(0.5);
-				 -o-transform: rotate(40deg) scale(0.5);
-						transform: rotate(40deg) scale(0.5);
-		-webkit-transition: all 0.8s ease-in-out;
-			 -moz-transition: all 0.8s ease-in-out;
-				-ms-transition: all 0.8s ease-in-out;
-				 -o-transition: all 0.8s ease-in-out;
-						transition: all 0.8s ease-in-out;
-	}
-	#reveal2.visible {
-		opacity: 1;
-		-webkit-transform: none;
-			 -moz-transform: none;
-				-ms-transform: none;
-				 -o-transform: none;
-						transform: none;
-	}
+
       
     

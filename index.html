@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
-=======
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    -->
->>>>>>> 904fad2e5974dbb370b0f15b7dc98d1117c6fe58
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -33,10 +27,6 @@
                         <a class="nav-link text-white text-shadow" href="plants.html"><i
                                 class="fa fa-leaf pr-2"></i>plants</a>
 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link current-page text-white text-shadow" href="hikes.html"><i
-                                class="fa fa-blind pr-2"></i>hikes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white text-shadow" href="contact.html"><i
@@ -85,48 +75,12 @@
         </div>
     </div>
 
-
-    <div class="container-fluid map-section p-0">
-        <div class="row pr-0 mr-0">
-            <!--display the form for inputing a search to bring back results on potential hikes-->
-            <div id="search-hikes">
-                <div class="panel hike-search col-10 ml-2">
-                    <div class="panel-heading">
-                        <p class="panel-title pt-2"><strong>Hike Search</strong></p>
-                    </div>
-                    <div class="panel-body">
-                        <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form" class="col-lg-5 col-md-7 col-sm-8 col-10 pl-0">
-                            <!-- Here we create the text box for capturing the zipcode-->
-                            <div class="form-group row">
-                                <label class="my-auto text-left" for="zip"></label>
-                                <input name="zip" type="text" pattern="[0-9]*" class="form-control col-4 ml-3" id="zip" placeholder="Zipcode">
-                            </div>
-                            <div class="form-group row">
-                                <label class="my-auto text-left" for="maxDistance"></label>
-                                <input name="distance" type="number" class="form-control col-4 ml-3" id="maxDistance" placeholder="Distance (m)">
-                            </div>
-                            <div class="form-group row">
-                                <label for="maxResults"></label>
-                                <input name="results" type="number" class="form-control col-4 ml-3" id="maxResults" placeholder="# of Hikes">
-                            </div>
-                            <!-- Here we have our final submit button -->
-                            <button class="btn btn-default search-button text-white text-center" id="run-search"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="map-box col-lg-9 col-mg-12 p-0" id='map'></div>
-            <div class="side-bar col-lg-3 my-auto">
-                <ul class="plant-list p-2">
-                    <h5 class="pb-3 lead">What do you want to find?</h5>
-                    <li class="pb-2 row">
-                        <a href="" class="col-3"><img class="img-fluid" src="images/juneberries.png"></a>
-                        <a href="" class="col-9 my-auto">Juneberries</a>
-                    </li>
-                    <li class="pb-2 row">
-                        <a href="" class="col-3"><img class="img-fluid" src="images/sageleaves.png"></a>
-                        <a href="" class="col-9 my-auto">White Sage</a>
+    <div class="container-fluid p-0 map-space">
+        <div class="row plant-box pr-0 mr-0">
+            <img class="map-pic img-fluid col-md-9 p-0" src="images/map_temporary.png">
+            <div class="col-md-3 pl-sm-1 pr-sm-1 pt-5 pr-0">
+                <ul class="plant-list lead">
+                    <h4 class="pb-2">Plant images or icons could go here</h4>
                     </li>
                     <li class="pb-2 row">
                         <a href="" class="col-3"><img class="img-fluid" src="images/inkycap.png"></a>
@@ -155,12 +109,34 @@
                 </ul>
             </div>
         </div>
+        <div id=“search-hikes”>
+            <div class=“panel hike-search col-lg-2 col-md-2 col-sm-2 col-3 ml-2">
+                <div class=“panel-heading”>
+                    <p class=“panel-title pt-2"><strong>Hike Search</strong></p>
+                </div>
+                <div class=“panel-body”>
+                    <!-- Here we create an HTML Form for handling the inputs-->
+                    <form role=“form” class=“pl-0”>
+                        <!-- Here we create the text box for capturing the zipcode-->
+                        <div class=“form-group row”>
+                            <label class=“my-auto text-left” for=“zip”></label>
+                            <input name=“zip” type=“text” pattern=“[0-9]*” class=“form-control ml-3" id=“zip” placeholder=“Zipcode”>
+                        </div>
+                        <!-- Here we have our final submit button -->
+                        <button class=“btn btn-default search-button text-white text-center” id=“run-search”><i class=“fa fa-search”></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
+    
 
 
-        <!-- create empty div for ScrollMagic trigger to hide logo  
-        set display of logo element to none via CSS class hidden or jquery .hide -->
+
+        <div class="container-fluid pt-5 pb-5 shadow text-center">
+            Plants or hikes could also go here
+        </div>
+
 
         <div class="bottom-bar container-fluid pt-3 pb-3 shadow">
             <div class="row">
@@ -176,24 +152,14 @@
                 <div class="col-md-2 col-sm-0"></div>
             </div>
         </div>
-       
-    <!--For now, this can display the results from the user input and the query-->
-    <div id="results-display" class="container-fluid pt-5 pb-5"></div>
 
+        <!--For now, this can display the results from the user input and the query-->
+        <div id="results-display" class="container-fluid pt-5 pb-5"></div>
         <div class="container-fluid p-0">
             <div class="row m-0">
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
-                    <div class="card-title">Herbed Butter</div>
-                </div>
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
-                    <div class="card-title">Blueberry & Wild Mint</div>
-                </div>
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
-                    <div class="card-title">Roasted Ferns</div>
-                </div>
+                <img class="col-4 img-fluid p-0" src="images/blueberries.jpg">
+                <img class="col-4 img-fluid p-0" src="images/herbed_butter.jpg">
+                <img class="col-4 img-fluid p-0" src="images/fiddlehead.jpg">
             </div>
         </div>
 
