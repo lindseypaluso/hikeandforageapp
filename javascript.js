@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$('#logo2').hide();
+  $('#logo2').hide();
 
 
 // Map
@@ -281,11 +281,11 @@ var geojson = {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrolltop > 690 || document.documentElement.scrollTop > 690) {
+  if (document.body.scrolltop > 580 || document.documentElement.scrollTop > 580) {
     document.getElementById("navlinks").style.height = "50px";
     document.getElementById("logo").style.display = "none";
     document.getElementById("logo2").style.display = "block";
-    document.getElementById("navlinks").style.backgroundColor = "gray";
+    document.getElementById("navlinks").style.backgroundColor = "lightgray";
   
   } else {
     document.getElementById("navlinks").style.backgroundColor = "transparent";
