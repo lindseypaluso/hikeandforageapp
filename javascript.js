@@ -297,7 +297,7 @@ var geojson = {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrolltop > 580 || document.documentElement.scrollTop > 580) {
+  if (document.body.scrolltop > 300 || document.documentElement.scrollTop > 300) {
     document.getElementById("navlinks").style.height = "50px";
     document.getElementById("logo").style.display = "none";
     document.getElementById("logo2").style.display = "block";
