@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -21,7 +19,7 @@
 
     <div class="container-fluid p-0">
         <nav
-            class="navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light bg-white static-top shadow p-0 fixed-top">
+            class="navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light bg-white static-top shadow p-0" id="navlinks">
 
             <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4"
                     src="images/h&f-logo5.png"></a>
@@ -30,10 +28,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-white text-shadow" href="plants.html"><i class="fa fa-leaf pr-2"></i>plants</a>
            
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link current-page text-white text-shadow" href="hikes.html"><i
-                                class="fa fa-blind pr-2"></i>hikes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white text-shadow" href="contact.html"><i
@@ -47,54 +41,40 @@
                 </ul>
             </div>
         </nav>
+        <div class="page-header contact-header-box">Contact Us</div>
+    </div>
+        
 
-        <div class="page-header"></div>
+    <div class="container col-10 p-3 mt-5 mb-5 shadow rounded">
+        <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <img src="images/photo-1528539054466-ccb019c0862c.jpeg" class="img-thumbnail" alt="forage">
+                </div>
+            <form class="col-md-8 col-sm-6 p-4">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input class="form-control" type="text"></input>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email address</label>
+                    <input type="email" class="form-control" id="contact-email" placeholder="name@example.com" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="contact-button-box text-center">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialUnchecked" name="materialRadio">
+                        <label class="form-check-label" for="materialUnchecked" style="margin-top:3px; font-size:14px;">Click here to receive our newsletter!</label>
+                    </div>
+                    <button type="submit" class="btn contact-btn btn-lg pl-3 pr-3" data-toggle="modal" data-target="#myModalSubmit">Send</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-
-
-
-
-
-
-    <div class="container-fluid contact-space p-0">
-        <div class=row>
-            <div class="col-lg-12">
-                <div class="page-header-box">Contact</div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8 my-auto">
-                <div class="contact-form-box">
-                    <img src="images/photo-1528539054466-ccb019c0862c.jpeg" class="contact-image" width="250px" alt="trail">
-                    <form style="float:right; width:400px; margin-right:40px; margin-top:40px;">
-                        <div class="form-group">
-                            <label for="contact-name">Name</label>
-                            <input class="form-control" type="text"></input>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email">Email address</label>
-                            <input type="email" class="form-control" id="contact-email" placeholder="name@example.com" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message">Message</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <div class="contact-button-box text-center">
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="materialUnchecked" name="materialRadio">
-                                <label class="form-check-label" for="materialUnchecked" style="margin-top:3px; font-size:14px;">Click here to receive our newsletter!</label>
-                            </div>
-                            <button type="submit" class="btn contact-btn btn-lg" data-toggle="modal" data-target="#myModalSubmit">Send</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-2"></div>
-        </div>
 
         <!-- Submit Button Modal -->
         <div id="myModalSubmit" class="modal fade" role="dialog">
@@ -130,7 +110,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-        <script src="javascript.js"></script>
 
 </body>
 
