@@ -38,10 +38,20 @@ $("#run-search").on("click", function (event) {
 
 
 //when a plant icon is clicked
-//take the zipcode value of that plant
-//empty the results-display
-//prepend the results display with "Places to find" + thisPlant
-//run the search based off of the zipcode value of that plant and print the hikes to the screen
+$(".plant-selector").on("click", function (event) {
+  //take the zipcode value of that plant
+  zipcode = $(this).val().trim();
+  console.log(zipcode);
+  //empty the results-display
+  $("#results-display").empty();
+  //prepend the results display with "Places to find" + thisPlant
+  var resultsHeading = $("<h2>");
+  $(resultsHeading).text("Places to find ")
+  $("#results-display").prepend("resultsHeading");
+  //run the search based off of the zipcode value of that plant and print the hikes to the screen
+  runSearch();
+})
+
 
 function runSearch() {
   //zip code API
