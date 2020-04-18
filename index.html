@@ -52,7 +52,6 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-pause="false">
                     <img class="d-block w-100" src="images/sunrise.jpg" alt="First slide">
-
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="images/zion-park.jpg" alt="Second slide">
@@ -87,25 +86,25 @@
         <div class="row pr-0 mr-0">
             <!--display the form for inputing a search to bring back results on potential hikes-->
             <div id="search-hikes">
-                <div class="panel hike-search col-10 ml-2">
+                <div class="panel hike-search col-lg-2 col-md-2 col-sm-2 col-3 ml-2">
                     <div class="panel-heading">
                         <p class="panel-title pt-2"><strong>Hike Search</strong></p>
                     </div>
                     <div class="panel-body">
                         <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form" class="col-lg-5 col-md-7 col-sm-8 col-10 pl-0">
+                        <form role="form" class="pl-0">
                             <!-- Here we create the text box for capturing the zipcode-->
                             <div class="form-group row">
                                 <label class="my-auto text-left" for="zip"></label>
-                                <input name="zip" type="text" pattern="[0-9]*" class="form-control col-4 ml-3" id="zip" placeholder="Zipcode">
+                                <input name="zip" type="text" pattern="[0-9]*" class="form-control ml-3" id="zip" placeholder="Zipcode">
                             </div>
                             <div class="form-group row">
                                 <label class="my-auto text-left" for="maxDistance"></label>
-                                <input name="distance" type="number" class="form-control col-4 ml-3" id="maxDistance" placeholder="Distance (m)">
+                                <input name="distance" type="number" class="form-control ml-3" id="maxDistance" placeholder="Distance (m)">
                             </div>
                             <div class="form-group row">
                                 <label for="maxResults"></label>
-                                <input name="results" type="number" class="form-control col-4 ml-3" id="maxResults" placeholder="# of Hikes">
+                                <input name="results" type="number" class="form-control ml-3" id="maxResults" placeholder="# of Hikes">
                             </div>
                             <!-- Here we have our final submit button -->
                             <button class="btn btn-default search-button text-white text-center" id="run-search"><i class="fa fa-search"></i></button>
