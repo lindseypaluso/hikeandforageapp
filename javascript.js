@@ -1,14 +1,17 @@
 $(document).ready(function() {
+$('#logo2').hide();
+
 
 // Map
 mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ';
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe'
+        style: 'mapbox://styles/lisamcamp/ck8zfacri00a81iqshqireqqe',
+        center: [-111.764113, 39.356964],
+        zoom: 6
     });
     map.scrollZoom.disable();
     map.addControl(new mapboxgl.NavigationControl());
-
 
 
 
@@ -121,6 +124,155 @@ function runSearch() {
     //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
 
   
+
+
+// Add plants as objects    
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'juneberries',
+    geometry: {
+      type: 'Point',
+      coordinates: [-112.516166, 38.280930]
+    },
+    properties: {
+      title: 'Juneberries',
+      description: 'Beaver, UT'
+    }
+  },
+  {
+    type: 'inkycap',
+    geometry: {
+      type: 'Point',
+      coordinates: [-111.812605, 40.521111]
+    },
+    properties: {
+      title: 'Inky Cap Mushrooms',
+      description: 'Draper, UT'
+    }
+    },
+    {
+      type: 'sage',
+      geometry: {
+        type: 'Point',
+        coordinates: [-112.625621, 39.704337]
+      },
+      properties: {
+        title: 'White Sage',
+        description: 'Delta, UT'
+    }
+    },
+    {
+      type: 'elderberry',
+      geometry: {
+        type: 'Point',
+        coordinates: [-111.406138, 40.066830]
+      },
+      properties: {
+        title: 'Elderberry Flowers',
+        description: 'Provo, UT'
+      }
+      },
+      {
+        type: 'spinach',
+        geometry: {
+          type: 'Point',
+          coordinates: [-111.832968, 41.066532]
+        },
+        properties: {
+          title: 'Wild Spinach',
+          description: 'Layton, UT'
+        }
+        },
+        {
+        type: 'mulberry',
+        geometry: {
+          type: 'Point',
+          coordinates: [-112.251402, 40.501375]
+        },
+        properties: {
+          title: 'White Mulberry',
+          description: 'Tooele, UT'
+        }
+        },
+        {
+          type: 'pinecone',
+          geometry: {
+            type: 'Point',
+            coordinates: [-113.063708, 37.583641]
+          },
+          properties: {
+            title: 'Pine Nuts',
+            description: 'Cedar City, UT'
+          }
+          },
+          {
+          type: 'asparagus',
+          geometry: {
+            type: 'Point',
+            coordinates: [-112.224091, 38.768214]
+          },
+          properties: {
+            title: 'Wild Asparagus',
+            description: 'Sugarville, UT'
+          }
+  }]
+};
+
+// Add markers to map
+  geojson.features.forEach(function(marker) {
+// Create HTML element
+   var el = document.createElement('div'); 
+// Add class for CSS
+   el.className = marker.type;
+   new mapboxgl.Marker(el)
+   .setLngLat(marker.geometry.coordinates)
+   .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+   .setHTML('<h4 class="pop-up-title">' + marker.properties.title + '</h4><p class="pop-up-text">Find near ' + marker.properties.description + '</p>'))
+   .addTo(map);
+  });
+
+  // On click zoom function for each icon
+  $(".juneberries").on("click", function() {
+    map.flyTo({ center: geojson.features[0].geometry.coordinates, zoom: 10});
+    // run zip code hike search function
+  });
+
+  $(".inkycap").on("click", function() {
+    map.flyTo({ center: geojson.features[1].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".sage").on("click", function() {
+    map.flyTo({ center: geojson.features[2].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".elderberry").on("click", function() {
+    map.flyTo({ center: geojson.features[3].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".spinach").on("click", function() {
+    map.flyTo({ center: geojson.features[4].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".mulberry").on("click", function() {
+    map.flyTo({ center: geojson.features[5].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".pinecone").on("click", function() {
+    map.flyTo({ center: geojson.features[6].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
+
+  $(".asparagus").on("click", function() {
+    map.flyTo({ center: geojson.features[7].geometry.coordinates, zoom: 10});
+     // run zip code hike search function
+  });
 
 
 });
