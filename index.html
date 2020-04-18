@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    -->
+
     <link rel="stylesheet" media="screen" href="style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet'>
     <title>Eat Wild!</title>
@@ -30,10 +28,6 @@
                         <a class="nav-link text-white text-shadow" href="plants.html"><i
                                 class="fa fa-leaf pr-2"></i>plants</a>
 
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link current-page text-white text-shadow" href="hikes.html"><i
-                                class="fa fa-blind pr-2"></i>hikes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white text-shadow" href="contact.html"><i
@@ -123,6 +117,7 @@
                     <li class="pb-2 row">
                         <a href="" class="col-3"><img class="img-fluid" src="images/sageleaves.png"></a>
                         <a href="" class="col-9 my-auto">White Sage</a>
+
                     </li>
                     <li class="pb-2 row">
                         <a href="" class="col-3"><img class="img-fluid" src="images/inkycap.png"></a>
@@ -151,12 +146,34 @@
                 </ul>
             </div>
         </div>
+        <div id=“search-hikes”>
+            <div class=“panel hike-search col-lg-2 col-md-2 col-sm-2 col-3 ml-2">
+                <div class=“panel-heading”>
+                    <p class=“panel-title pt-2"><strong>Hike Search</strong></p>
+                </div>
+                <div class=“panel-body”>
+                    <!-- Here we create an HTML Form for handling the inputs-->
+                    <form role=“form” class=“pl-0”>
+                        <!-- Here we create the text box for capturing the zipcode-->
+                        <div class=“form-group row”>
+                            <label class=“my-auto text-left” for=“zip”></label>
+                            <input name=“zip” type=“text” pattern=“[0-9]*” class=“form-control ml-3" id=“zip” placeholder=“Zipcode”>
+                        </div>
+                        <!-- Here we have our final submit button -->
+                        <button class=“btn btn-default search-button text-white text-center” id=“run-search”><i class=“fa fa-search”></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
+    
 
 
-        <!-- create empty div for ScrollMagic trigger to hide logo  
-        set display of logo element to none via CSS class hidden or jquery .hide -->
+
+        <div class="container-fluid pt-5 pb-5 shadow text-center">
+            Plants or hikes could also go here
+        </div>
+
 
         <div class="bottom-bar container-fluid pt-3 pb-3 shadow">
             <div class="row">
@@ -172,24 +189,14 @@
                 <div class="col-md-2 col-sm-0"></div>
             </div>
         </div>
-       
-    <!--For now, this can display the results from the user input and the query-->
-    <div id="results-display" class="container-fluid pt-5 pb-5"></div>
 
+        <!--For now, this can display the results from the user input and the query-->
+        <div id="results-display" class="container-fluid pt-5 pb-5"></div>
         <div class="container-fluid p-0">
             <div class="row m-0">
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
-                    <div class="card-title">Herbed Butter</div>
-                </div>
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
-                    <div class="card-title">Blueberry & Wild Mint</div>
-                </div>
-                <div class="card border-0 p-0 col-4">
-                    <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
-                    <div class="card-title">Roasted Ferns</div>
-                </div>
+                <img class="col-4 img-fluid p-0" src="images/blueberries.jpg">
+                <img class="col-4 img-fluid p-0" src="images/herbed_butter.jpg">
+                <img class="col-4 img-fluid p-0" src="images/fiddlehead.jpg">
             </div>
         </div>
 

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+$('#logo2').hide();
+
 
 // Map
 mapboxgl.accessToken = 'pk.eyJ1IjoibGlzYW1jYW1wIiwiYSI6ImNrOHpleHlzYTAxcWkzZnBlcjdxM3BoZnIifQ.bNRIw_e-uCQLRGfy9-bHlQ';
@@ -102,6 +104,7 @@ $("#run-search").on("click", function (event) {
     //we could maybe use this for crowdedness or prettiness or dificulty? not sure what available conditions there are
     //required: ids
     //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
+
   
 
 

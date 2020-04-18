@@ -2,13 +2,14 @@
 body {
   font-family: 'Spartan', sans-serif;
 }
+
+
 a:hover {
   color: white;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 2px #29472A;
-  font-family: 'Spartan', sans-serif;
 }
 
 .carousel-inner {
@@ -27,10 +28,6 @@ a:link, a:visited {
   right: 35px;
   z-index: 1;
 }
-.text-shadow {
-  text-shadow: 2px 2px 2px #29472A;
-  font-family: 'Gotu', sans-serif;
-}
 
 /* Logo */
 .logo {
@@ -39,9 +36,8 @@ a:link, a:visited {
   width: 170px;
 }
 
-.logo2 {
-  position: absolute;
-  width: 170px;
+#logo2 {
+  top: -32px;
   /* height: 200px; */
 }
 
@@ -75,7 +71,6 @@ a:link, a:visited {
 .plant-list {
   list-style-type: none;
 }
-
 /* Plant bar beneath map (only on smaller screen sizes) */
 .bottom-bar {
   display: none;
@@ -122,12 +117,17 @@ footer {
   font-size: 25px;
 }
 
-/* Plant Page */
-.plants-header-box {
-  background-image: url("images/photo-1425736317462-a103b1303a35.jpeg");
+/* Page header */
+.page-header {
+  background-image: url("images/mtns2.jpeg");
+  width: 100%;
+  height: 250px;
+  box-shadow: 0px 3px 5px grey;
+  margin-bottom: 10px;
 }
 
-.plant-space, .contact-space {
+/* Plant Page */
+.plant-space, .contact-space, .about-space {
   background-color: rgb(247, 247, 247);
 }
 
@@ -142,13 +142,28 @@ footer {
   box-shadow: 3px 3px 5px grey;
 }
 
-/* Too broad, interferes with homepage, choose different class*/
-/* h5 {
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
+.plant-card {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
   box-shadow: 3px 3px 5px grey;
-} */
+}
+
+.plant-card-title {
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+  text-align: center;
+  padding: 10px 15px 10px 15px;
+  width: 75%;
+  height: 40px;
+  float: right;
+}
+
 #plant-button {
   color: white;
   font-size: 12px;
@@ -173,7 +188,7 @@ footer {
 /* Contact Page */
 .contact-btn {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   background-color: rgb(32, 53, 37);
   margin: auto;
   margin-top: 30px;
@@ -186,11 +201,36 @@ footer {
 .contact-image {
   float: left; 
   width: 280px; 
-  margin-left: 35px; 
-  margin-top: 5px; 
+  margin: 40px 40px 40px 55px;
   box-shadow: 3px 3px 5px grey;
 }
 
+.contact-form-box {
+  height: 500px;
+  background-color: white;
+  box-shadow: 3px 3px 5px grey;
+  margin: 40px 55px 40px 40px;
+  font-family: 'Manrope', sans-serif;
+  border-radius: 10px;
+}
+
+.contact-form {
+  margin: 40px 50px 0px 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Plant modals */
 .modal-img {
   float: left; 
   width: 300px; 
@@ -206,28 +246,114 @@ footer {
   margin-top: 10px;
 }
 
-/* Scroll animations */
-  #reveal2 {
-		opacity: 0;
-		-webkit-transform: rotate(40deg) scale(0.5);
-			 -moz-transform: rotate(40deg) scale(0.5);
-				-ms-transform: rotate(40deg) scale(0.5);
-				 -o-transform: rotate(40deg) scale(0.5);
-						transform: rotate(40deg) scale(0.5);
-		-webkit-transition: all 0.8s ease-in-out;
-			 -moz-transition: all 0.8s ease-in-out;
-				-ms-transition: all 0.8s ease-in-out;
-				 -o-transition: all 0.8s ease-in-out;
-						transition: all 0.8s ease-in-out;
-	}
-	#reveal2.visible {
-		opacity: 1;
-		-webkit-transform: none;
-			 -moz-transform: none;
-				-ms-transform: none;
-				 -o-transform: none;
-						transform: none;
-	}
+.modal-recipe-link {
+  float: right; 
+  width: 400px; 
+  margin-right: 20px; 
+  margin-top: 10px;
+}
+
+/* About page */
+.about-box {
+  box-shadow: 3px 3px 5px grey;
+  border-radius: 10px;
+  margin: 40px;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+  background-color: white;
+  height: 500px;
+}
+
+.about-image {
+  float: right; 
+  width: 310px; 
+  margin-right: 35px; 
+  margin-top: 15px;
+  box-shadow: 3px 3px 5px grey;
+  margin-left: 15px;
+}
+
+.about-text {
+  float: left; 
+  width: 390px;
+  margin-left: 35px;
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: rgb(44, 66, 44); 
+  font-size: 25px;
+  box-shadow: 3px 3px 5px grey;
+}
+
+a:hover {
+  color: white;
+}
+
+a:link, a:visited {
+  color: rgb(63, 85, 63); 
+} 
+
+.bottom-bar {
+  display: none;
+  color: rgb(44, 66, 44);
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  background:rgba(245, 255, 247, 0.8);
+  padding: 10px 20px 10px 40px;
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+}
+
+.plant-icons {
+  font-size: 25px;
+}
+
+.map-plants {
+  border-top: 2px solid rgb(188, 196, 190);
+  border-bottom: 2px solid rgb(188, 196, 190);
+}
+
+.map-box {
+  width: 100%;
+  height: 500px;
+}
+
+@media only screen and (max-width: 991px){
+  .side-bar {
+  display: none;
+  }
+
+  .bottom-bar {
+    display: inherit;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .map-box {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .map-box {
+    width: 100%;
+    height: 300px;
+}
+
+  }
+
+
       
 /* Map */
 .map-section {
