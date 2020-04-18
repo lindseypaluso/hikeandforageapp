@@ -30,6 +30,7 @@ $("#run-search").on("click", function (event) {
 
 
 //when a plant icon is clicked
+//right now it's working for the li items, but not for the bottom-bar images
 $(".plant-selector").on("click", function (event) {
   
   //take the zipcode value of that plant
