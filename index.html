@@ -27,7 +27,7 @@
                         <a class="nav-link text-white text-shadow" href="plants.html"><i
                                 class="fa fa-leaf pr-2"></i>plants</a>
 
-                        </li>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white text-shadow" href="contact.html"><i
                                 class="fa fa-envelope pr-2"></i>contact</a>
@@ -109,10 +109,29 @@
                 </ul>
             </div>
         </div>
+        <div id=“search-hikes”>
+            <div class=“panel hike-search col-lg-2 col-md-2 col-sm-2 col-3 ml-2">
+                <div class=“panel-heading”>
+                    <p class=“panel-title pt-2"><strong>Hike Search</strong></p>
+                </div>
+                <div class=“panel-body”>
+                    <!-- Here we create an HTML Form for handling the inputs-->
+                    <form role=“form” class=“pl-0”>
+                        <!-- Here we create the text box for capturing the zipcode-->
+                        <div class=“form-group row”>
+                            <label class=“my-auto text-left” for=“zip”></label>
+                            <input name=“zip” type=“text” pattern=“[0-9]*” class=“form-control ml-3" id=“zip” placeholder=“Zipcode”>
+                        </div>
+                        <!-- Here we have our final submit button -->
+                        <button class=“btn btn-default search-button text-white text-center” id=“run-search”><i class=“fa fa-search”></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
+    
 
-     
+
 
         <div class="container-fluid pt-5 pb-5 shadow text-center">
             Plants or hikes could also go here
@@ -133,9 +152,9 @@
                 <div class="col-md-2 col-sm-0"></div>
             </div>
         </div>
-       
-    <!--For now, this can display the results from the user input and the query-->
-    <div id="results-display" class="container-fluid pt-5 pb-5"></div>
+
+        <!--For now, this can display the results from the user input and the query-->
+        <div id="results-display" class="container-fluid pt-5 pb-5"></div>
         <div class="container-fluid p-0">
             <div class="row m-0">
                 <img class="col-4 img-fluid p-0" src="images/blueberries.jpg">
