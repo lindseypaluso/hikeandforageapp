@@ -86,20 +86,25 @@ function runSearch() {
       //create a for loop that displays the hike name, difficulty, length, and plant
       for (var i = 0; i < result.length; i++) {
         var hikeDiv = $("<div>");
-        $(hikeDiv).attr("class", "hikeDiv w-50 float-left");
+        $(hikeDiv).attr("class", "hikeDiv w-50 float-left card");
 
-        var hikeName = $("<h4>");
-        $(hikeName).text(result[i].name);
         var hikeImg = $("<img>");
-        $(hikeImg).attr("src", result[i].imgSqSmall);
-        $(hikeImg).attr("class", "hike-image")
+        $(hikeImg).attr("src", result[i].imgSmall);
+        $(hikeImg).attr("class", "hike-image card-img-top");
+        
+        var hikeBody = $("<div>");
+        $(hikeBody).attr("class", "card-body");
+          var hikeName = $("<h4>");
+          $(hikeName).text(result[i].name);
+          var hikeDiff = $("<p>");
+          $(hikeDiff).attr("class", "card-text");
+          $(hikeDiff).text("Difficulty: " + result[i].difficulty);
+          var hikeLength = $("<p>");
+          $(hikeLength).attr("class", "card-text");
+          $(hikeLength).text(result[i].length + "miles");
+        $(hikeBody).append(hikeName, hikeDiff, hikeLength);
 
-        var hikeDiff = $("<p>");
-        $(hikeDiff).text("Difficulty: " + result[i].difficulty);
-        var hikeLength = $("<p>");
-        $(hikeLength).text(result[i].length + "miles");
-
-        $(hikeDiv).append(hikeName, hikeImg, hikeDiff, hikeLength);
+        $(hikeDiv).append(hikeName, hikeBody);
         $("#results-display").append(hikeDiv);
       }
       $("#results-display").attr("class", "pt-5 pb-5")
