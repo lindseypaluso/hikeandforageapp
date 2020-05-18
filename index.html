@@ -17,7 +17,7 @@
 <body>
 
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light static-top p-0 fixed-top"
+        <nav class="homepage-nav navbar navbar-expand-sm navbar-expand-lg col-12 navbar-light static-top p-0 fixed-top"
             id="navlinks">
             <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4" src="images/h&f-logo5.png" id="logo"></a>
             <a class="logo-link" href="index.html"><img class="logo mt-3 ml-4" src="images/logo2.png" id="logo2"></a>
@@ -103,67 +103,94 @@
             <!--Plant Selectors-->
             <div class="side-bar col-lg-3 my-auto">
                 <ul class="plant-list p-2">
-                    <h5 class="pb-3 lead">What do you want to find?</h5>
+                    <h5 class="lead text-center"><strong>Search by Plant</strong></h5>
+                    <hr>
                     <li class="pb-2 row plant-selector" value="84713" name="Juneberries">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/juneberries.png"></a>
-                        <a href="#trails" class="col-9 my-auto">Juneberries</a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/juneberries.png"></a>
+                        <a href="#trails" class="col-9 text-left my-auto">Juneberries</a>
                     </li>
                     <li class="pb-2 row plant-selector" value="84049" name="White Sage">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/sageleaves.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/sageleaves.png"></a>
                         <a href="#trails" class="col-9 my-auto">White Sage</a>
                     </li>
                     <li class="pb-2 row plant-selector" value="84020" name="Inky Cap Mushrooms">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/inkycap.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/inkycap.png"></a>
                         <a href="#trails" class="col-9 my-auto">Inky Cap Mushrooms</a>
                     </li>
                     <li class="pb-2 row plant-selector" value="84601" name="Elderberry Flowers">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/elderberry.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/elderberry.png"></a>
                         <a href="#trails" class="col-9 my-auto">Elderberry Flowers</a>
                     </li>
                     <li class="pb-2 row plant-selector" value="84040" name="Wild Spinach">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/wildspinach.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/wildspinach.png"></a>
                         <a href="#trails" class="col-9 my-auto">Wild Spinach</a>
                     </li>
-                    <li class="pb-2 row plant-selector" value="84624" name="Wild Asparagus">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/asparagus.png"></a>
+                    <li class="pb-2 row plant-selector" value="84627" name="Wild Asparagus">
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/asparagus.png"></a>
                         <a href="#trails" class="col-9 my-auto">Wild Asparagus</a>
                     </li>
                     <li class="pb-2 row plant-selector" value="84074" name="White Mulberry">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/whitemulberry.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/whitemulberry.png"></a>
                         <a href="#trails" class="col-9 my-auto">White Mulberry</a>
                     </li>
                     <li class="row plant-selector" value="84720" name="Pine Nuts">
-                        <a href="#trails" class="col-3"><img class="img-fluid" src="images/pinecone.png"></a>
+                        <a href="#trails" class="col-3"><img class="side-icon img-fluid" src="images/pinecone.png"></a>
                         <a href="#trails" class="col-9 my-auto">Pine Nuts</a>
                     </li>
                 </ul>
             </div>
         </div>
+
     </div>
     <!--Something is breaking with the img classes/values/names because when clicked on to run the search, it's running the function but printing an error-->
-    <div class="bottom-bar container-fluid pt-3 pb-3 shadow">
-        <div class="row">
-            <div class="col-md-2 col-sm-0"></div>
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84713" name="Junberries" src="images/juneberries.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84049" name="White Sage" src="images/sageleaves.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84020" name="Inky Cap Mushrooms" src="images/inkycap.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84601" name="Elderberry Flowers" src="images/elderberry.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84040" name="Wild Spinach" src="images/wildspinach.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84624" name="Wild Asparagus" src="images/asparagus.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84074" name="White Mulberry" src="images/whitemulberry.png">
-            <img class="img-fluid col-md-1 col-3 plant-selector" value="84720" name="Pine Nuts" src="images/pinecone.png">
-            <div class="col-md-2 col-sm-0"></div>
-        </div>
+    <div class="bottom-bar container-fluid pt-2 pb-1 shadow">
+            <ul class="plant-list row p-0">
+                <li class="plant-selector" value="84713" name="Juneberries">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/juneberries.png"></a>
+                </li>
+                <li class="plant-selector" value="84049" name="White Sage">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/sageleaves.png"></a>
+                </li>
+                <li class="plant-selector" value="84020" name="Inky Cap Mushrooms">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/inkycap.png"></a>
+                </li>
+                <li class="plant-selector" value="84601" name="Elderberry Flowers">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/elderberry.png"></a>
+                </li>
+                <li class="plant-selector" value="84040" name="Wild Spinach">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/wildspinach.png"></a>
+                </li>
+                <li class="plant-selector" value="84627" name="Wild Asparagus">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/asparagus.png"></a>
+                </li>
+                <li class="plant-selector" value="84074" name="White Mulberry">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/whitemulberry.png"></a>
+                </li>
+                <li class="plant-selector" value="84720" name="Pine Nuts">
+                    <a href="#trails"><img class="bottom-icon img-fluid" src="images/pinecone.png"></a>
+                </li>
+            </ul>
     </div>
 
         <!--For now, this can display the results from the user input and the query-->
-        <div id="results-display" class="container-fluid"></div>
+        <div class="background-results container-fluid">
+        <div id="results-display" id="trails"></div>
+        </div>
 
         <div class="container-fluid p-0">
             <div class="row m-0">
-                <img class="col-4 img-fluid p-0" src="images/blueberries.jpg">
-                <img class="col-4 img-fluid p-0" src="images/herbed_butter.jpg">
-                <img class="col-4 img-fluid p-0" src="images/fiddlehead.jpg">
+                <div class="card border-0 p-0 col-4">
+                    <img class="card-img rounded-0 img-fluid p-0" src="images/herbed_butter.jpg">
+                    <a class="card-title" href="https://eatsmarter.com/recipes/herb-butter-with-wild-garlic" target="_blank">Herbed Butter</a>
+                </div>
+                <div class="card border-0 p-0 col-4">
+                    <img class="card-img rounded-0 img-fluid p-0" src="images/blueberries.jpg">
+                    <a class="card-title" href="https://www.driscolls.com/recipe/blueberry-mint-lemonade" target="_blank">Blueberry & Wild Mint</a>
+                </div>
+                <div class="card border-0 p-0 col-4">
+                    <img class="card-img rounded-0 img-fluid p-0" src="images/fiddlehead.jpg">
+                    <a class="card-title" href="https://homemadeandyummy.com/roasted-fiddlehead-ferns/" target="_blank">Roasted Ferns</a>
+                </div>
             </div>
         </div>
 

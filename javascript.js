@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$('#logo2').hide();
+  $('#logo2').hide();
 
 
 // Map
@@ -28,6 +28,16 @@ $("#run-search").on("click", function (event) {
   runSearch();
 })
 
+function searchStyling() {
+ //empty the results-display
+ $("#results-display").empty();
+ //prepend the results display with "Places to find" + thisPlant
+ var resultsHeading = $("<h2>");
+ resultsHeading.addClass("text-center pb-5");
+ $(resultsHeading).text("Where to Find " + $(this).attr('name'));
+ $("#results-display").prepend(resultsHeading); 
+}
+
 
 //when a plant icon is clicked
 //right now it's working for the li items, but not for the bottom-bar images
@@ -40,7 +50,8 @@ $(".plant-selector").on("click", function (event) {
   $("#results-display").empty();
   //prepend the results display with "Places to find" + thisPlant
   var resultsHeading = $("<h2>");
-  $(resultsHeading).text("Places to find " + $(this).attr('name'));
+  resultsHeading.addClass("text-center pb-5");
+  $(resultsHeading).text("Where to Find " + $(this).attr('name'));
   $("#results-display").prepend(resultsHeading);
   //run the search based off of the zipcode value of that plant and print the hikes to the screen
   runSearch();
@@ -90,11 +101,11 @@ function runSearch() {
 
         var hikeImg = $("<img>");
         $(hikeImg).attr("src", result[i].imgSmall);
-        $(hikeImg).attr("class", "hike-image card-img-top");
+        $(hikeImg).addClass("hike-image shadow mb-3 card-img-top");
         
         var hikeBody = $("<div>");
         $(hikeBody).attr("class", "card-body");
-          var hikeName = $("<h4>");
+          var hikeName = $("<h4 class='pb-3'>");
           $(hikeName).text(result[i].name);
           var hikeDiff = $("<p>");
           $(hikeDiff).attr("class", "card-text");
@@ -107,29 +118,11 @@ function runSearch() {
         $(hikeDiv).append(hikeImg, hikeBody);
         $("#results-display").append(hikeDiv);
       }
-      $("#results-display").attr("class", "pt-5 pb-5")
+      $("#results-display").addClass("p-5 container");
       $("#results-display").append("<div class='clearfix'></div>");
     })
   })
 }
-
-//API key: 200727629-d773c339e8dcd5aa90cb10c2a18cde1f
-//Hiking Project Data API
-//Different methods available
-  // getTrails - returns trails for given query
-    //required arguments: key - Your private key, lat - Latitude for a given area, lon - Longitude for a given area
-    //optional arguments: maxDistance, maxResults, sort, minLength, minStars
-    //example syntax: https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
-  //getTrailsById
-    //required arguments: key & ids
-    //maybe we would want to use this if we're focusing on 10 specific hikes?
-    //example: https://www.hikingproject.com/data/get-trails-by-id?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
-  //getConditions
-    //we could maybe use this for crowdedness or prettiness or dificulty? not sure what available conditions there are
-    //required: ids
-    //example: https://www.hikingproject.com/data/get-conditions?ids=7001635,7002742,7006663,7000108,7002175&key=200727629-d773c339e8dcd5aa90cb10c2a18cde1f
-
-  
 
 
 // Add plants as objects    
@@ -239,58 +232,81 @@ var geojson = {
    .addTo(map);
   });
 
-  // On click zoom function for each icon
+  // On click zoom and search function for each icon
   $(".juneberries").on("click", function() {
-    map.flyTo({ center: geojson.features[0].geometry.coordinates, zoom: 10});
-    // run zip code hike search function
+    map.flyTo({ center: geojson.features[0].geometry.coordinates, zoom: 8});
+    name = "Juneberries";
+    zipcode = 84713;
+    searchStyling();
+    runSearch();
   });
 
   $(".inkycap").on("click", function() {
-    map.flyTo({ center: geojson.features[1].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[1].geometry.coordinates, zoom: 8});
+    name = "Inky Cap Mushrooms";
+    zipcode = 84020;
+    searchStyling();
+    runSearch();
   });
 
   $(".sage").on("click", function() {
-    map.flyTo({ center: geojson.features[2].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[2].geometry.coordinates, zoom: 8});
+    name = "White Sage";
+    zipcode = 84049;
+    searchStyling();
+    runSearch();
   });
 
   $(".elderberry").on("click", function() {
-    map.flyTo({ center: geojson.features[3].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[3].geometry.coordinates, zoom: 8});
+    name = "Elderberry Flowers";
+    zipcode = 84601;
+    searchStyling();
+    runSearch();
   });
 
   $(".spinach").on("click", function() {
-    map.flyTo({ center: geojson.features[4].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[4].geometry.coordinates, zoom: 8});
+    name = "Wild Spinach";
+    zipcode = 84040;
+    searchStyling();
+    runSearch();
   });
 
   $(".mulberry").on("click", function() {
-    map.flyTo({ center: geojson.features[5].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[5].geometry.coordinates, zoom: 8});
+    name = "White Mulberry";
+    zipcode = 84074;
+    searchStyling();
+    runSearch();
   });
 
   $(".pinecone").on("click", function() {
-    map.flyTo({ center: geojson.features[6].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[6].geometry.coordinates, zoom: 8});
+    name = "Pine Nuts";
+    zipcode = 84720;
+    searchStyling();
+    runSearch();
   });
 
   $(".asparagus").on("click", function() {
-    map.flyTo({ center: geojson.features[7].geometry.coordinates, zoom: 10});
-     // run zip code hike search function
+    map.flyTo({ center: geojson.features[7].geometry.coordinates, zoom: 8});
+    name = "Wild Asparagus";
+    zipcode = 84627;
+    searchStyling();
+    runSearch();
   });
-
 
 });
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrolltop > 690 || document.documentElement.scrollTop > 690) {
+  if (document.body.scrolltop > 300 || document.documentElement.scrollTop > 300) {
     document.getElementById("navlinks").style.height = "50px";
     document.getElementById("logo").style.display = "none";
     document.getElementById("logo2").style.display = "block";
-    document.getElementById("navlinks").style.backgroundColor = "gray";
+    document.getElementById("navlinks").style.backgroundColor = "lightgray";
   
   } else {
     document.getElementById("navlinks").style.backgroundColor = "transparent";
