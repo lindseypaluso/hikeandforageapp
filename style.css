@@ -112,8 +112,7 @@ a:link, a:visited {
 /* Hike Results */
 .hike-image {
   object-fit: cover;
-  height: 200px;
-  width: 200px;
+  width: 100%;
   object-position: 20%;
   overflow: hidden;
 }
@@ -201,16 +200,6 @@ footer {
   color: white;
   font-size: 12px;
   background-color: rgb(32, 53, 37);
-}
-
-/* Hike Page */
-
-.hike-image {
-  object-fit: cover;
-  /* height: 100px; */
-  width: 100%;
-  object-position: 20%;
-  overflow: hidden;
 }
 
 /* Contact Page */

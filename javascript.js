@@ -97,25 +97,37 @@ function runSearch() {
       //create a for loop that displays the hike name, difficulty, length, and plant
       for (var i = 0; i < result.length; i++) {
         var hikeDiv = $("<div>");
-        $(hikeDiv).attr("class", "hikeDiv w-50 float-left card");
-
+        $(hikeDiv).attr("class", "hikeDiv w-75 card mx-auto");
+        //image will display at the top of the card
         var hikeImg = $("<img>");
-        $(hikeImg).attr("src", result[i].imgSmall);
+        $(hikeImg).attr("src", result[i].imgMedium);
         $(hikeImg).addClass("hike-image shadow mb-3 card-img-top");
-        
+        //body of the card will display bellow
+        //all text needs to be appended to the hikeBody
         var hikeBody = $("<div>");
         $(hikeBody).attr("class", "card-body");
           var hikeName = $("<h4 class='pb-3'>");
-          $(hikeName).text(result[i].name);
+            $(hikeName).text(result[i].name);
+          var hikeSummary = $("<p class='card-text'>");
+            $(hikeSummary).text(result[i].summary);
           var hikeDiff = $("<p>");
-          $(hikeDiff).attr("class", "card-text");
-          $(hikeDiff).text("Difficulty: " + result[i].difficulty);
+            $(hikeDiff).attr("class", "card-text");
+            $(hikeDiff).text("Difficulty: " + result[i].difficulty);
           var hikeLength = $("<p>");
-          $(hikeLength).attr("class", "card-text");
-          $(hikeLength).text(result[i].length + "miles");
-        $(hikeBody).append(hikeName, hikeDiff, hikeLength);
-
+            $(hikeLength).attr("class", "card-text");
+            $(hikeLength).text(result[i].length + "miles");
+          //because the link nees a url, button, and icon, it also must prepend those attributes and add text to display
+          var hikeLink = $("<a>");
+            $(hikeLink).attr("href", result[i].url);
+            var hikeButton = $("<button class='btn btn-md modal-btn'>");
+            var viewIcon = $("<i class='fa fa-eye'>");
+            $(hikeLink).text("View Hike");
+            $(hikeLink).append(hikeButton, viewIcon);
+        //append everything to the body
+        $(hikeBody).append(hikeName, hikeSummary, hikeDiff, hikeLength, hikeLink);
+        //append the body and image to the full div
         $(hikeDiv).append(hikeImg, hikeBody);
+        //add every hikeDiv to the display area
         $("#results-display").append(hikeDiv);
       }
       $("#results-display").addClass("p-5 container");
