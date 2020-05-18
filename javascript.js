@@ -97,7 +97,7 @@ function runSearch() {
       //create a for loop that displays the hike name, difficulty, length, and plant
       for (var i = 0; i < result.length; i++) {
         var hikeDiv = $("<div>");
-        $(hikeDiv).attr("class", "hikeDiv w-75 card mx-auto");
+        $(hikeDiv).attr("class", "hikeDiv w-75 card mx-auto mb-2");
         //image will display at the top of the card
         var hikeImg = $("<img>");
         $(hikeImg).attr("src", result[i].imgMedium);
@@ -119,10 +119,11 @@ function runSearch() {
           //because the link nees a url, button, and icon, it also must prepend those attributes and add text to display
           var hikeLink = $("<a>");
             $(hikeLink).attr("href", result[i].url);
-            var hikeButton = $("<button class='btn btn-md modal-btn'>");
+            var hikeButton = $("<button class='btn modal-btn pull-right'>");
             var viewIcon = $("<i class='fa fa-eye'>");
-            $(hikeLink).text("View Hike");
-            $(hikeLink).append(hikeButton, viewIcon);
+            $(hikeButton).text(" View Hike");
+            $(hikeButton).prepend(viewIcon);
+            $(hikeLink).append(hikeButton);
         //append everything to the body
         $(hikeBody).append(hikeName, hikeSummary, hikeDiff, hikeLength, hikeLink);
         //append the body and image to the full div

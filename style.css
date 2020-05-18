@@ -116,13 +116,20 @@ a:link, a:visited {
   object-position: 20%;
   overflow: hidden;
 }
-
+h2 {
+  font-weight: bold;
+  color: rgb(44, 66, 44);
+  font-size: 30px;
+}
 .hikeDiv {
   padding: 20px;
+  /* background-color:rgba(224, 255, 180); */
 }
 
 .background-results {
-  background: rgba(248, 255, 249, 0.8);
+  background-image: url(./images/yellow-back.jpg);
+  background-repeat: repeat;
+  /* background: rgba(248, 255, 249, 0.8); */
 }
 
 /* Recipe Section */
