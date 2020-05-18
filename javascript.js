@@ -104,7 +104,7 @@ function runSearch() {
           $(hikeLength).text(result[i].length + "miles");
         $(hikeBody).append(hikeName, hikeDiff, hikeLength);
 
-        $(hikeDiv).append(hikeName, hikeBody);
+        $(hikeDiv).append(hikeImg, hikeBody);
         $("#results-display").append(hikeDiv);
       }
       $("#results-display").attr("class", "pt-5 pb-5")

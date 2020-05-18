@@ -179,6 +179,7 @@ footer {
 
 .hike-image {
   object-fit: cover;
+  /* height: 100px; */
   width: 100%;
   object-position: 20%;
   overflow: hidden;
